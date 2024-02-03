@@ -1,0 +1,134 @@
+@use "../styles" as *;
+
+.hero {
+    display: flex;
+    height: 720px;
+    width: 100%;
+    background-color: $h-accent-blue;
+    position: relative;
+
+    // efeito gradiente que se move
+
+    background: linear-gradient(-45deg, #4053FD, #ff4040, #4053FD, #ff19ec);
+	background-size: 500% 300%;
+	animation: gradient 15s ease infinite;
+
+    &::after {
+
+        content: '';
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        background-color: $h-white;
+        height: 40px;
+        width: 55%;
+        z-index: 2;
+    }
+
+    .hero-container {
+        display: flex;
+        align-items: center;
+        max-width: 1080px;
+        margin: 0px auto;
+        color: $h-white;
+        gap: 80px;
+        z-index: 3;
+        border-left: 1px rgba(255, 255, 255, 0.151) solid;
+        border-right: 1px rgba(255, 255, 255, 0.151) solid;
+        padding: 0px 32px;
+
+        .cta-container {
+            display: flex;
+            flex-direction: column;
+            gap: 32px;
+            align-items: baseline;
+            justify-content: center;
+            max-width: 420px;
+
+            .logo-holtz {
+                height: 48px;
+                object-fit: contain;
+            }
+            .hero-cta {
+                @include H1-bold;
+            }
+
+            .primary-btn {
+                @include body-bold;
+                display: inline-flex;
+                padding: 12px 20px;
+                justify-content: center;
+                align-items: center;
+                gap: 8px;
+                border-radius: 300px;
+                border: 1px solid #2B2B36;
+                background: #FFF;
+                box-shadow: 0px 4px 0px 0px #2B2B36;
+                color: $h-black;
+                cursor: pointer;
+                transition: .3s ease;
+
+                &:hover {
+
+                    transform: translateY(2px);
+                    box-shadow: 0px 0px 0px 0px #2B2B36;
+                    background-color: #00000028;
+                    border: 1px solid #fff;
+                    color: $h-white;
+
+                }
+                
+            }
+        }
+
+        .hero-img-container {
+            animation: float 6s ease-in-out infinite;
+        }
+    }
+
+}
+
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+
+@keyframes float {
+	0% {
+		transform: translatey(0px);
+	}
+	50% {
+		transform: translatey(-20px);
+	}
+	100% {
+		transform: translatey(0px);
+	}
+}
+
+
+.content-container {
+    display: flex;
+    flex-direction: column;
+    padding: 80px;
+    max-width: 800px;
+    margin: auto;
+
+    h1 {
+        @include H2-bold;
+        padding-bottom: 32px;
+    }
+
+    p {
+        padding-top: 32px;
+        @include body--large;
+    }
+}
