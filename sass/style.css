@@ -1,0 +1,174 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+ul[role=list],
+ol[role=list] {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+a:not([class]) {
+  -webkit-text-decoration-skip: ink;
+          text-decoration-skip-ink: auto;
+}
+
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+  border-style: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+* {
+  color: inherit;
+  margin: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+html ::-moz-selection { /* Code for Firefox */
+  color: #ffffff;
+  background: #4053FD;
+}
+html ::selection {
+  color: #ffffff;
+  background: #4053FD;
+}
+
+body {
+  position: relative;
+  font-family: Helvetica, Sans-serif;
+  background-color: #ffffff;
+  color: #2B2B36;
+  font-size: 1.6rem;
+  -webkit-font-smoothing: antialiased;
+}
+
+ul {
+  padding: 0;
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+hr {
+  border: 0;
+  border-top: 1px dotted #efefef;
+}
+
+img {
+  max-width: 100%;
+}
+
+svg {
+  transition: all 0.2s ease;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 2px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #2B2B36;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #ffffff;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #4053FD;
+}
+
+.hero {
+  background-color: #4053FD;
+  height: 600px;
+  display: flex;
+}
+.hero h2 {
+  font-family: whyte;
+  font-size: 40px;
+  color: #ffffff;
+  margin: auto;
+  max-width: 600px;
+  letter-spacing: 1px;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  max-width: 600px;
+  margin: auto;
+  padding-top: 80px;
+}
+.container h1 {
+  font-family: whyte;
+}
+.container .text-container {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.container .text-container p {
+  font-family: whyte;
+  font-size: 20px;
+  line-height: 28px;
+  font-weight: 300;
+  color: #6B6E73;
+}/*# sourceMappingURL=style.css.map */

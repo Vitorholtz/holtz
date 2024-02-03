@@ -1,0 +1,76 @@
+@use "../styles" as *;
+
+// Base styles
+
+* {
+  color: inherit;
+  margin: 0;
+}
+
+html {
+  ::-moz-selection { /* Code for Firefox */
+    color: $h-white;
+    background: $h-accent-blue;
+  }
+  ::selection {
+    color: $h-white;
+    background: $h-accent-blue;
+  }
+  font-size: 62.5%;
+}
+
+body {
+  // Verificar se isso não dá problema em outros componentes (Position relative no body)
+  position: relative;
+  font-family: Helvetica, Sans-serif;
+  background-color: $h-white;
+  color: $h-black;
+  font-size: 1.6rem;
+  //ver o que é isso
+  -webkit-font-smoothing: antialiased;
+}
+
+ul {
+  padding: 0;
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+hr {
+  border: 0;
+  border-top: 1px dotted #efefef;
+}
+
+img {
+  max-width: 100%;
+}
+
+svg {
+  transition: all .2s ease;
+}
+
+// Custom scroll
+
+/* width */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 2px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: $h-black; 
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: $h-white; 
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: $h-accent-blue; 
+}
