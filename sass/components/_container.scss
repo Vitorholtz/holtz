@@ -7,12 +7,8 @@
     height: 600px;
     display: flex;
 
-    h2 {
-
-        font-family: 'Whyte';
-        font-size: 48px;
-        font-weight: 700;
-        line-height: 64px;
+    h1 {
+        @include H1-bold;
         color: white;
         margin: auto;
         max-width: 600px;
@@ -28,12 +24,8 @@
     margin: auto;
     padding-top: 80px;
 
-    h1 {
-
-        font-family: 'Whyte';
-        font-size: 40px;
-        font-weight: 700;
-        letter-spacing: -1px;
+    h2 {
+        @include H2-bold;
     }
 
     .text-container {
@@ -43,12 +35,8 @@
 
 
         p {
-    
-            font-family: 'Whyte';
-            font-size: 20px;
-            font-weight: 300;
-            color: $h-gray;
-    
+            @include body--large;
+        
         }
     }
 
