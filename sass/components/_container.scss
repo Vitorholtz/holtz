@@ -9,12 +9,13 @@
 
     h2 {
 
-        font-family: whyte;
-        font-size: 40px;
-        color: $h-white;
+        font-family: 'Whyte';
+        font-size: 48px;
+        font-weight: 700;
+        line-height: 64px;
+        color: white;
         margin: auto;
         max-width: 600px;
-        letter-spacing: 1px;
     }
 }
 
@@ -29,7 +30,10 @@
 
     h1 {
 
-        font-family: whyte;
+        font-family: 'Whyte';
+        font-size: 40px;
+        font-weight: 700;
+        letter-spacing: -1px;
     }
 
     .text-container {
@@ -40,9 +44,8 @@
 
         p {
     
-            font-family: whyte;
+            font-family: 'Whyte';
             font-size: 20px;
-            line-height: 28px;
             font-weight: 300;
             color: $h-gray;
     

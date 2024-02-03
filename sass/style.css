@@ -66,6 +66,30 @@ select {
     scroll-behavior: auto !important;
   }
 }
+@font-face {
+  font-family: "Whyte";
+  src: url("../assets/fonts/whyte/Whyte-Light.woff2") format("woff2"), url("../assets/fonts/whyte/Whyte-Light.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Whyte";
+  src: url("../assets/fonts/whyte/Whyte-Regular.woff2") format("woff2"), url("../assets/fonts/whyte/Whyte-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Whyte";
+  src: url("../assets/fonts/whyte/Whyte-Medium.woff2") format("woff2"), url("../assets/fonts/whyte/Whyte-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Whyte";
+  src: url("../assets/fonts/whyte/Whyte-Bold.woff2") format("woff2"), url("../assets/fonts/whyte/Whyte-Bold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+}
 * {
   color: inherit;
   margin: 0;
@@ -85,7 +109,7 @@ html ::selection {
 
 body {
   position: relative;
-  font-family: Helvetica, Sans-serif;
+  font-family: "Times New Roman", Helvetica, Sans-serif;
   background-color: #ffffff;
   color: #2B2B36;
   font-size: 1.6rem;
@@ -141,12 +165,13 @@ svg {
   display: flex;
 }
 .hero h2 {
-  font-family: whyte;
-  font-size: 40px;
-  color: #ffffff;
+  font-family: "Whyte";
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 64px;
+  color: white;
   margin: auto;
   max-width: 600px;
-  letter-spacing: 1px;
 }
 
 .container {
@@ -158,7 +183,10 @@ svg {
   padding-top: 80px;
 }
 .container h1 {
-  font-family: whyte;
+  font-family: "Whyte";
+  font-size: 40px;
+  font-weight: 700;
+  letter-spacing: -1px;
 }
 .container .text-container {
   display: flex;
@@ -166,9 +194,8 @@ svg {
   gap: 16px;
 }
 .container .text-container p {
-  font-family: whyte;
+  font-family: "Whyte";
   font-size: 20px;
-  line-height: 28px;
   font-weight: 300;
   color: #6B6E73;
 }/*# sourceMappingURL=style.css.map */
