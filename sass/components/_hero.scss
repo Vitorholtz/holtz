@@ -130,5 +130,6 @@
     p {
         padding-top: 32px;
         @include body--large;
+        color: $h-gray;
     }
 }
