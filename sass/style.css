@@ -349,15 +349,21 @@ svg {
   }
 }
 .vh-hero {
+  position: relative;
   display: flex;
-  height: 94vh;
+  height: 860px;
   width: 100%;
   background-color: #4053FD;
-  position: relative;
 }
-@media (max-width: 480px) {
+@media (max-width: 1380px) {
   .vh-hero {
-    height: 100vh;
+    height: 680px;
+  }
+}
+@media (max-width: 960px) {
+  .vh-hero {
+    height: -moz-fit-content;
+    height: fit-content;
   }
 }
 .vh-hero::after {
@@ -423,13 +429,12 @@ svg {
 @media (max-width: 960px) {
   .vh-hero .hero-content-container {
     flex-direction: column;
-    margin-top: auto;
+    margin-top: 96px;
     margin-bottom: 32px;
   }
 }
 @media (max-width: 480px) {
   .vh-hero .hero-content-container {
-    margin-bottom: 16px;
     gap: 64px;
   }
 }
@@ -469,11 +474,6 @@ svg {
 .vh-hero .hero-content-container .hero-img-container {
   animation: float 6s ease-in-out infinite;
   max-width: 480px;
-}
-@media (max-width: 960px) {
-  .vh-hero .hero-content-container .hero-img-container {
-    max-width: 320px;
-  }
 }
 .vh-hero .hero-detail-right {
   position: absolute;

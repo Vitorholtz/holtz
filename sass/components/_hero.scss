@@ -1,20 +1,19 @@
 @use "../styles" as *;
 
 .vh-hero {
+    position: relative;
     display: flex;
-    height: 94vh;
+    height: 860px;
     width: 100%;
     background-color: $h-accent-blue;
-    position: relative;
-    // efeito gradiente que se move
-    // background: linear-gradient(-45deg, #4053FD, #ff4040, #4053FD, #ff19ec);
-	// background-size: 500% 300%;
-	// animation: gradient 15s ease infinite;
+    
+    @include xl {
+      height: 680px;
+    }
 
-    @include sm {
-        height: 100vh;
-      }
-
+    @include lg {
+      height: fit-content;;
+    }
 
     &::after {
         content: '';
@@ -73,14 +72,12 @@
 
         @include lg {
             flex-direction: column;
-            margin-top: auto;
+            margin-top: 96px;
             margin-bottom: 32px;
           }
 
         @include sm {
-            margin-bottom: 16px;
             gap: 64px;
-
           }
 
         .cta-container {
@@ -112,10 +109,6 @@
         .hero-img-container {
             animation: float 6s ease-in-out infinite;
             max-width: 480px;
-
-            @include lg {
-                max-width: 320px;
-              }
         }
     }
 
