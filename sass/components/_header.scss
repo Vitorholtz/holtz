@@ -10,6 +10,34 @@
     transition: all .3s ease;
     z-index: 100;
 
+    &--scroll-mode {
+        background-color: rgba(255, 255, 255, 0.840);
+        backdrop-filter: blur(8px);
+        border-bottom: 1px $h-border solid;
+
+        .nav-item {
+            color: $h-black !important;
+
+            &::after {
+                background-color: $h-black !important;
+                opacity: .3 !important;
+            }
+
+            &:hover::after {
+                opacity: 1 !important;
+            }
+        }
+
+        .nav-divider {
+            background-color: $h-black !important;
+            opacity: .3 !important;
+        }
+
+        .nav-toggle-line {
+            background-color: $h-black !important;
+        }
+    }
+
     .header-content-container {
         display: flex;
         justify-content: space-between;
@@ -20,7 +48,15 @@
 
         @include xl {
             max-width: 960px;
-          }  
+          }
+          
+        @include lg {
+            padding: 0px 40px;
+          }
+
+        @include sm {
+            padding: 0px 16px;
+          }
 
         .logo-img {
             max-width: 80px;
@@ -31,7 +67,7 @@
             align-items: center;
             gap: 24px;
 
-            @include lg {
+            @include md {
                 display: none;
               }   
 
@@ -44,6 +80,8 @@
                 &::after {
                     content: '';
                     display: block;
+                    position: absolute;
+                    bottom: -6px;
                     height: 1px;
                     width: 32%;
                     background-color: $h-white;
@@ -76,7 +114,7 @@
             align-items: center;
             display: none;
             
-            @include lg {
+            @include md {
                 display: flex;
               }
 
@@ -86,6 +124,13 @@
                 background-color: $h-white;
                 transition: .2s ease;
             }
+
+            &--active {
+                .nav-toggle-line {
+                    background-color: $h-black;
+                }
+            }
+            
             ._1 {
                 transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
                 transform-style: preserve-3d;

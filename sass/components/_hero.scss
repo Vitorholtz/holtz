@@ -12,7 +12,7 @@
     }
 
     @include lg {
-      height: fit-content;;
+      height: fit-content;
     }
 
     &::after {
@@ -61,24 +61,27 @@
         display: flex;
         align-items: center;
         max-width: 1080px;
-        margin: 0px auto;
+        margin: 38px auto 0px auto;
         color: $h-white;
         gap: 80px;
         padding: 0px 24px;
 
         @include xl {
             max-width: 960px;
+            gap: 40px;
           }  
 
         @include lg {
-            flex-direction: column;
-            margin-top: 96px;
-            margin-bottom: 32px;
+            margin-top: 112px;
+            margin-bottom: 40px;
+            padding: 0px 40px;
           }
 
-        @include sm {
-            gap: 64px;
+          @include md {
+            flex-direction: column;
+            padding: 0px 24px;
           }
+
 
         .cta-container {
             display: flex;
@@ -87,23 +90,28 @@
             align-items: baseline;
             justify-content: center;
             max-width: 460px;
+            
+            @include lg {
+                max-width: 100%;
+              }
+
+            @include md {
+              max-width: 100%;
+              align-items: center;
+              }
 
             .hero-cta {
                 @include H1-bold;
+                
+              @include lg {
+                  @include H3-bold;
+                }
 
-                @include xl {
-                    @include H3-bold;
+              @include md {
+                text-align: center;
                   }
-                  
-                @include lg {
-                    text-align: center;
-                  }
+                
             }
-
-            @include lg {
-                max-width: 100%;
-                align-items: center;
-              }
         }
 
         .hero-img-container {
@@ -205,11 +213,10 @@
 
 // Outro arquivo
 
-
 .content-container {
     display: flex;
     flex-direction: column;
-    padding: 80px;
+    padding: 80px 20px;
     max-width: 800px;
     margin: auto;
 
@@ -220,7 +227,56 @@
 
     p {
         padding-top: 32px;
-        @include body--large;
+        @include body;
         color: $h-gray;
     }
+}
+
+
+body {
+
+  &::before {
+    content: '';
+    position: absolute;
+    left: 160px;
+    background-color: $h-border;
+    height: 100%;
+    width: 1px;
+    z-index: -1;
+
+    @include xl {
+        left: 64px;
+      }
+
+    @include lg {
+        left: 12px;
+      }
+
+    @include sm {
+        display: none;
+      }
+}
+
+  &::after {
+    content: '';
+    top: 0;
+    position: absolute;
+    right: 160px;
+    background-color: $h-border;
+    height: 100%;
+    width: 1px;
+    z-index: -1;
+
+    @include xl {
+        right: 64px;
+      }
+
+    @include lg {
+        right: 12px;
+      }
+
+    @include sm {
+        display: none;
+      }
+}
 }
