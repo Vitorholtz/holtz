@@ -754,6 +754,11 @@ svg {
     line-height: 1.33;
   }
 }
+@media (max-width: 480px) {
+  .intro-text-container .intro-text {
+    padding: 0 40px;
+  }
+}
 .intro-text-container .intro-text::before {
   content: "";
   position: absolute;
@@ -940,8 +945,14 @@ svg {
   line-height: 1.33;
   color: #4A4F57;
   text-align: center;
-  width: 100%;
-  padding: 0 32px;
+  max-width: 320px;
+  padding: 0 24px;
+}
+@media (max-width: 480px) {
+  .skills-grid-display .skill-card .skill-text {
+    max-width: 100%;
+    padding: 0 40px;
+  }
 }
 .skills-grid-display .grid-col-span-1 {
   grid-column: span 2;
