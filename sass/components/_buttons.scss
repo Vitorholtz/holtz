@@ -2,24 +2,21 @@
 
 .primary-btn {
     @include body-bold;
-    display: inline-flex;
+    display: flex;
+    width:fit-content;
     padding: 12px 20px;
     justify-content: center;
     align-items: center;
-    gap: 8px;
     border-radius: 16px;
-    border: 1px solid #2B2B36;
-    background: #FFF;
-    box-shadow: 0px 4px 0px 0px #2B2B36;
+    border: 1px solid $h-black;
+    background: $h-white;
+    box-shadow: 0px 4px 0px 0px $h-black;
     color: $h-black;
     cursor: pointer;
     transition: .3s ease;
 
     &:hover {
         transform: translateY(6px);
-        box-shadow: 0px 0px 0px 0px #2B2B36;
-        background-color: #00000028;
-        border: 1px solid #fff;
-        color: $h-white;
+        box-shadow: 0px 0px 0px 0px $h-black;
     }
 }
