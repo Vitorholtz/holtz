@@ -940,15 +940,8 @@ svg {
   line-height: 1.33;
   color: #4A4F57;
   text-align: center;
-  max-width: 252px;
-}
-@media (max-width: 1380px) {
-  .skills-grid-display .skill-card .skill-text {
-    font-family: "Whyte";
-    font-weight: 300;
-    font-size: 1.6rem;
-    line-height: 1.5;
-  }
+  width: 100%;
+  padding: 0 32px;
 }
 .skills-grid-display .grid-col-span-1 {
   grid-column: span 2;
@@ -999,10 +992,6 @@ svg {
 }
 @media (max-width: 1380px) {
   .work-presentation-card {
-    font-family: "Whyte";
-    font-weight: 300;
-    font-size: 1.6rem;
-    line-height: 1.5;
     margin: 0 64px 160px 64px;
   }
 }
@@ -1071,23 +1060,23 @@ svg {
 .work-presentation-card .work-card-conntent-container .work-card-text {
   font-family: "Whyte";
   font-weight: 300;
-  font-size: 1.8rem;
-  line-height: 1.33;
+  font-size: 2rem;
+  line-height: 1.4;
   color: #4A4F57;
   margin-bottom: 56px;
-}
-@media (max-width: 1380px) {
-  .work-presentation-card .work-card-conntent-container .work-card-text {
-    font-family: "Whyte";
-    font-weight: 300;
-    font-size: 1.6rem;
-    line-height: 1.5;
-  }
 }
 @media (max-width: 1080px) {
   .work-presentation-card .work-card-conntent-container .work-card-text {
     text-align: center;
     margin-bottom: 40px;
+  }
+}
+@media (max-width: 480px) {
+  .work-presentation-card .work-card-conntent-container .work-card-text {
+    font-family: "Whyte";
+    font-weight: 300;
+    font-size: 1.8rem;
+    line-height: 1.33;
   }
 }
 .work-presentation-card .work-card-img {

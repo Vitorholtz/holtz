@@ -90,11 +90,8 @@
             @include body;
             color: $h-gray;
             text-align: center;
-            max-width: 252px;
-
-            @include xl {
-                @include body--small;
-              }
+            width: 100%;
+            padding: 0 32px;
         }
     }
 
