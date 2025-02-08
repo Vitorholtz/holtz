@@ -121,6 +121,28 @@ select {
   font-weight: 700;
   font-style: normal;
 }
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+@keyframes float {
+  0% {
+    transform: translatey(0px);
+  }
+  50% {
+    transform: translatey(-20px);
+  }
+  100% {
+    transform: translatey(0px);
+  }
+}
 * {
   color: inherit;
   margin: 0;
@@ -145,6 +167,55 @@ body {
   color: #2B2B36;
   font-size: 1.6rem;
   -webkit-font-smoothing: antialiased;
+}
+body::before {
+  content: "";
+  position: absolute;
+  left: 160px;
+  background-color: #E0E0E3;
+  height: 100%;
+  width: 1px;
+  z-index: -1;
+}
+@media (max-width: 1380px) {
+  body::before {
+    left: 64px;
+  }
+}
+@media (max-width: 1080px) {
+  body::before {
+    left: 12px;
+  }
+}
+@media (max-width: 480px) {
+  body::before {
+    display: none;
+  }
+}
+body::after {
+  content: "";
+  top: 0;
+  position: absolute;
+  right: 160px;
+  background-color: #E0E0E3;
+  height: 100%;
+  width: 1px;
+  z-index: -1;
+}
+@media (max-width: 1380px) {
+  body::after {
+    right: 64px;
+  }
+}
+@media (max-width: 1080px) {
+  body::after {
+    right: 12px;
+  }
+}
+@media (max-width: 480px) {
+  body::after {
+    display: none;
+  }
 }
 
 ul {
@@ -583,101 +654,6 @@ svg {
   }
 }
 
-@keyframes gradient {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
-}
-@keyframes float {
-  0% {
-    transform: translatey(0px);
-  }
-  50% {
-    transform: translatey(-20px);
-  }
-  100% {
-    transform: translatey(0px);
-  }
-}
-.content-container {
-  display: flex;
-  flex-direction: column;
-  padding: 80px 20px;
-  max-width: 800px;
-  margin: auto;
-}
-.content-container h1 {
-  font-family: "Whyte";
-  font-weight: 700;
-  font-size: 4rem;
-  line-height: 1.2;
-  padding-bottom: 32px;
-}
-.content-container p {
-  padding-top: 32px;
-  font-family: "Whyte";
-  font-weight: 300;
-  font-size: 1.8rem;
-  line-height: 1.33;
-  color: #4A4F57;
-}
-
-body::before {
-  content: "";
-  position: absolute;
-  left: 160px;
-  background-color: #E0E0E3;
-  height: 100%;
-  width: 1px;
-  z-index: -1;
-}
-@media (max-width: 1380px) {
-  body::before {
-    left: 64px;
-  }
-}
-@media (max-width: 1080px) {
-  body::before {
-    left: 12px;
-  }
-}
-@media (max-width: 480px) {
-  body::before {
-    display: none;
-  }
-}
-body::after {
-  content: "";
-  top: 0;
-  position: absolute;
-  right: 160px;
-  background-color: #E0E0E3;
-  height: 100%;
-  width: 1px;
-  z-index: -1;
-}
-@media (max-width: 1380px) {
-  body::after {
-    right: 64px;
-  }
-}
-@media (max-width: 1080px) {
-  body::after {
-    right: 12px;
-  }
-}
-@media (max-width: 480px) {
-  body::after {
-    display: none;
-  }
-}
-
 .primary-btn {
   font-family: "Whyte";
   font-weight: 700;
@@ -704,65 +680,13 @@ body::after {
   color: #ffffff;
 }
 
-.intro-display {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin: 160px auto 20px auto;
-}
-.intro-display .intro-img {
+.intro-img {
   border-radius: 900px;
   width: 120px;
   height: 120px;
   outline: 1px solid #E0E0E3;
   outline-offset: 10px;
-  margin-bottom: 32px;
-}
-@media (max-width: 1380px) {
-  .intro-display .intro-img {
-    width: 106px;
-    height: 106px;
-  }
-}
-.intro-display .intro-question {
-  font-family: "Whyte";
-  font-weight: 700;
-  font-size: 4rem;
-  line-height: 1.2;
-}
-@media (max-width: 1380px) {
-  .intro-display .intro-question {
-    font-family: "Whyte";
-    font-weight: 700;
-    font-size: 3.2rem;
-    line-height: 1.25;
-  }
-}
-.intro-display .vh-divider-one {
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  margin-top: 12px;
-}
-.intro-display .vh-divider-one .line1 {
-  width: 40px;
-  height: 1px;
-  background-color: #E0E0E3;
-}
-@media (max-width: 1380px) {
-  .intro-display .vh-divider-one .line1 {
-    width: 28px;
-  }
-}
-.intro-display .vh-divider-one .line2 {
-  width: 1px;
-  height: 40px;
-  background-color: #E0E0E3;
-}
-@media (max-width: 1380px) {
-  .intro-display .vh-divider-one .line2 {
-    height: 28px;
-  }
+  margin: 160px auto 32px auto;
 }
 
 .intro-text-container {
@@ -822,6 +746,7 @@ body::after {
   line-height: 1.4;
   max-width: 480px;
   text-align: center;
+  color: #4A4F57;
 }
 @media (max-width: 1380px) {
   .intro-text-container .intro-text {
@@ -866,6 +791,174 @@ body::after {
 }
 @media (max-width: 780px) {
   .intro-text-container .intro-text::after {
+    display: none;
+  }
+}
+
+.vh-title-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.vh-title-container .vh-title {
+  font-family: "Whyte";
+  font-weight: 700;
+  font-size: 4rem;
+  line-height: 1.2;
+}
+@media (max-width: 1380px) {
+  .vh-title-container .vh-title {
+    font-family: "Whyte";
+    font-weight: 700;
+    font-size: 3.2rem;
+    line-height: 1.25;
+  }
+}
+
+.vh-divider-one {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 12px;
+  margin-bottom: 24px;
+}
+.vh-divider-one .line1 {
+  width: 40px;
+  height: 1px;
+  background-color: #E0E0E3;
+}
+@media (max-width: 1380px) {
+  .vh-divider-one .line1 {
+    width: 28px;
+  }
+}
+.vh-divider-one .line2 {
+  width: 1px;
+  height: 40px;
+  background-color: #E0E0E3;
+}
+@media (max-width: 1380px) {
+  .vh-divider-one .line2 {
+    height: 28px;
+  }
+}
+
+.skills-grid-display {
+  display: grid;
+  justify-content: center;
+  margin: 0 160px;
+  border-top: 1px #E0E0E3 solid;
+  border-bottom: 1px #E0E0E3 solid;
+  grid-template-columns: repeat(6, 1fr);
+}
+@media (max-width: 1380px) {
+  .skills-grid-display {
+    margin: 0 64px;
+  }
+}
+@media (max-width: 1080px) {
+  .skills-grid-display {
+    margin: 0 12px;
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+@media (max-width: 480px) {
+  .skills-grid-display {
+    margin: 0;
+    grid-template-columns: 1fr;
+  }
+}
+.skills-grid-display .skill-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 64px 0;
+  border: 1px #E0E0E3 solid;
+}
+@media (max-width: 1380px) {
+  .skills-grid-display .skill-card {
+    padding: 56px 0;
+  }
+}
+@media (max-width: 1080px) {
+  .skills-grid-display .skill-card {
+    padding: 40px 0;
+  }
+}
+.skills-grid-display .skill-card .skill-img {
+  max-width: 200px;
+  margin-bottom: 20px;
+}
+@media (max-width: 1380px) {
+  .skills-grid-display .skill-card .skill-img {
+    max-width: 180px;
+  }
+}
+.skills-grid-display .skill-card .skill-title {
+  font-family: "Whyte";
+  font-weight: 700;
+  font-size: 3.2rem;
+  line-height: 1.25;
+  margin-bottom: 28px;
+  text-align: center;
+}
+@media (max-width: 1380px) {
+  .skills-grid-display .skill-card .skill-title {
+    margin-bottom: 16px;
+  }
+}
+.skills-grid-display .skill-card .skill-text {
+  font-family: "Whyte";
+  font-weight: 300;
+  font-size: 1.8rem;
+  line-height: 1.33;
+  text-align: center;
+  width: 248px;
+}
+@media (max-width: 1380px) {
+  .skills-grid-display .skill-card .skill-text {
+    font-family: "Whyte";
+    font-weight: 300;
+    font-size: 1.6rem;
+    line-height: 1.5;
+  }
+}
+.skills-grid-display .grid-col-span-1 {
+  grid-column: span 2;
+}
+.skills-grid-display .grid-col-span-2 {
+  grid-column: span 2;
+}
+.skills-grid-display .skill-display-detail-left-xl {
+  margin-top: auto;
+  justify-self: start;
+}
+@media (max-width: 1080px) {
+  .skills-grid-display .skill-display-detail-left-xl {
+    display: none;
+  }
+}
+.skills-grid-display .skill-display-detail-left-lg {
+  margin-top: auto;
+  justify-self: start;
+  display: none;
+}
+@media (max-width: 1080px) {
+  .skills-grid-display .skill-display-detail-left-lg {
+    display: block;
+  }
+}
+@media (max-width: 480px) {
+  .skills-grid-display .skill-display-detail-left-lg {
+    display: none;
+  }
+}
+.skills-grid-display .skill-display-detail-right {
+  margin-top: auto;
+  justify-self: end;
+}
+@media (max-width: 480px) {
+  .skills-grid-display .skill-display-detail-right {
     display: none;
   }
 }/*# sourceMappingURL=style.css.map */

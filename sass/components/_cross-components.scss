@@ -1,0 +1,46 @@
+@use "../styles" as *;
+
+// Titles
+.vh-title-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .vh-title {
+        @include H2-bold;
+    
+        @include xl {
+            @include H3-bold;
+        }
+    }
+}
+
+
+//Divider
+.vh-divider-one {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 12px;
+    margin-bottom: 24px;
+
+    .line1 {
+        width: 40px;
+        height: 1px;
+        background-color: $h-border;
+
+        @include xl {
+            width: 28px;
+        }
+    }
+
+    .line2 {
+        width: 1px;
+        height: 40px;
+        background-color: $h-border;
+
+        @include xl {
+            height: 28px;
+        }
+    }
+}

@@ -28,6 +28,53 @@ body {
   font-size: 1.6rem;
   //ver o que é isso
   -webkit-font-smoothing: antialiased;
+
+
+  // Linhas laterais
+  &::before {
+    content: '';
+    position: absolute;
+    left: 160px;
+    background-color: $h-border;
+    height: 100%;
+    width: 1px;
+    z-index: -1;
+
+    @include xl {
+        left: 64px;
+      }
+
+    @include lg {
+        left: 12px;
+      }
+
+    @include sm {
+        display: none;
+      }
+}
+
+  &::after {
+    content: '';
+    top: 0;
+    position: absolute;
+    right: 160px;
+    background-color: $h-border;
+    height: 100%;
+    width: 1px;
+    z-index: -1;
+
+    @include xl {
+        right: 64px;
+      }
+
+    @include lg {
+        right: 12px;
+      }
+
+    @include sm {
+        display: none;
+      }
+ }
 }
 
 ul {

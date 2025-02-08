@@ -1,0 +1,107 @@
+@use "../styles" as *;
+
+.skills-grid-display {
+    display: grid;
+    justify-content: center;
+    margin: 0 160px;
+    border-top: 1px $h-border solid;
+    border-bottom: 1px $h-border solid;
+    grid-template-columns: repeat(6, 1fr);
+
+    @include xl {
+        margin: 0 64px;
+      }
+
+    @include lg {
+        margin: 0 12px;
+        grid-template-columns: repeat(4, 1fr);
+      }
+
+    @include sm {
+        margin: 0;
+        grid-template-columns: 1fr;
+    }
+
+    .skill-card {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 64px 0;
+        border: 1px $h-border solid;
+
+        @include xl {
+            padding: 56px 0;
+          }
+
+        @include lg {
+            padding: 40px 0;
+          }
+
+        .skill-img {
+            max-width: 200px;
+            margin-bottom: 20px;
+            
+            @include xl {
+                max-width: 180px;
+              }
+        }
+        .skill-title {
+            @include H3-bold;
+            margin-bottom: 28px;
+            text-align: center;
+
+            @include xl {
+                margin-bottom: 16px;
+              }
+        }
+        .skill-text {
+            @include body;
+            text-align: center;
+            width: 248px;
+
+            @include xl {
+                @include body--small;
+              }
+        }
+    }
+
+    .grid-col-span-1 {
+        grid-column: span 2;
+    }
+
+    .grid-col-span-2 {
+        grid-column: span 2;
+    }
+
+    .skill-display-detail-left-xl {
+        margin-top: auto;
+        justify-self: start;
+
+        @include lg {
+            display: none;
+          }
+    }
+
+    .skill-display-detail-left-lg {
+        margin-top: auto;
+        justify-self: start;
+        display: none;
+
+        @include lg {
+            display: block;
+          }
+
+        @include sm {
+            display: none;
+          }
+    }
+
+    .skill-display-detail-right {
+        margin-top: auto;
+        justify-self: end;
+
+        @include sm {
+            display: none;
+          }
+    }
+}

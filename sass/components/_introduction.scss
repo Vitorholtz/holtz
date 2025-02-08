@@ -1,59 +1,12 @@
 @use "../styles" as *;
 
-.intro-display {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 160px auto 20px auto;
-
-    .intro-img {
-        border-radius: 900px;
-        width: 120px;
-        height: 120px;
-        outline: 1px solid $h-border;
-        outline-offset: 10px;
-        margin-bottom: 32px;
-
-        @include xl {
-            width: 106px;
-            height: 106px;
-        }
-
-    }
-    .intro-question {
-        @include H2-bold;
-
-        @include xl {
-            @include H3-bold;
-        }
-    }
-    // Cross-component
-    .vh-divider-one {
-        display: flex;
-        align-items: center;
-        flex-direction: column;
-        margin-top: 12px;
-
-        .line1 {
-            width: 40px;
-            height: 1px;
-            background-color: $h-border;
-
-            @include xl {
-                width: 28px;
-            }
-        }
-
-        .line2 {
-            width: 1px;
-            height: 40px;
-            background-color: $h-border;
-
-            @include xl {
-                height: 28px;
-            }
-        }
-    }
+.intro-img {
+    border-radius: 900px;
+    width: 120px;
+    height: 120px;
+    outline: 1px solid $h-border;
+    outline-offset: 10px;
+    margin: 160px auto 32px auto;
 }
 
 .intro-text-container {
@@ -107,6 +60,7 @@
         @include body--large;
         max-width: 480px;
         text-align: center;
+        color: $h-gray;
 
         @include xl {
             @include body;
