@@ -95,4 +95,13 @@
             border-right: none;
         }
     }
+
+    &--reverse {
+        flex-direction: row-reverse;
+        justify-content: start;
+
+        @include lg {
+            flex-direction: column;
+        }
+    }
 }

@@ -15,6 +15,10 @@
         backdrop-filter: blur(8px);
         border-bottom: 1px $h-border solid;
 
+        // .header-content-container {
+        //     max-width: 1600px !important;
+        // }
+
         .nav-item {
             color: $h-black !important;
 
@@ -45,6 +49,7 @@
         max-width: 1080px;
         padding: 0 24px;
         margin: auto;
+        transition: all .3s ease;
 
         @include xl {
             max-width: 960px;

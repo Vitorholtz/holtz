@@ -301,6 +301,7 @@ svg {
   max-width: 1080px;
   padding: 0 24px;
   margin: auto;
+  transition: all 0.3s ease;
 }
 @media (max-width: 1380px) {
   .vh-header .header-content-container {
@@ -1106,5 +1107,14 @@ svg {
     border-bottom: 1px #E0E0E3 solid;
     border-left: none;
     border-right: none;
+  }
+}
+.work-presentation-card--reverse {
+  flex-direction: row-reverse;
+  justify-content: start;
+}
+@media (max-width: 1080px) {
+  .work-presentation-card--reverse {
+    flex-direction: column;
   }
 }/*# sourceMappingURL=style.css.map */
