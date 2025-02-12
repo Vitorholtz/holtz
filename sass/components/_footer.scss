@@ -8,7 +8,7 @@
     background-repeat: no-repeat;
 
     @include lg {
-      background-image: url("/assets/images/footer-divider-mobile.svg");
+      background-image: url("assets/images/footer-divider-mobile.svg");
       background-position-y: 168px;
 
       @include sm {
