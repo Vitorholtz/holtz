@@ -3,12 +3,12 @@
 .vh-footer {
     position: relative;
     background-color: $h-black;
-    background-image: url("/assets/images/footer-divider.svg");
-    background-position: center;
+    background-image: url("../assets/images/footer-divider.svg");
+    background-position: top;
     background-repeat: no-repeat;
 
     @include lg {
-      background-image: url("assets/images/footer-divider-mobile.svg");
+      background-image: url("../assets/images/footer-divider-mobile.svg");
       background-position-y: 168px;
 
       @include sm {
