@@ -15,9 +15,10 @@
         backdrop-filter: blur(8px);
         border-bottom: 1px $h-border solid;
 
-        // .header-content-container {
-        //     max-width: 1600px !important;
-        // }
+        .header-content-container {
+            max-width: none !important;
+            padding: 0 192px !important;
+        }
 
         .nav-item {
             color: $h-black !important;
@@ -46,8 +47,7 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-        max-width: 1080px;
-        padding: 0 24px;
+        padding: 0 444px;
         margin: auto;
         transition: all .3s ease;
 

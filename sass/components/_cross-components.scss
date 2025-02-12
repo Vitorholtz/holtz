@@ -13,6 +13,22 @@
             @include H3-bold;
         }
     }
+    .ending-text {
+        @include body--large;
+        color: $h-gray ;
+        text-align: center;
+        max-width: 480px;
+        margin: 16px 0 32px 0;
+
+        @include sm {
+            @include body;
+            padding: 0 20px;
+        }
+    }
+
+    .primary-btn {
+        margin-bottom: 24px;
+    }
 }
 
 
@@ -42,5 +58,9 @@
         @include xl {
             height: 28px;
         }
+    }
+
+    &--reverse {
+        transform: rotate(180deg);
     }
 }

@@ -1,0 +1,191 @@
+@use "../styles" as *;
+
+.vh-footer {
+    position: relative;
+    background-color: $h-black;
+    background-image: url("/assets/images/footer-divider.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+
+    @include lg {
+      background-image: url("/assets/images/footer-divider-mobile.svg");
+      background-position-y: 168px;
+
+      @include sm {
+        background-position-y: 196px;
+      }
+    }
+
+    &::before {
+        content: '';
+        position: absolute;
+        left: 160px;
+        background-color: rgba(255, 255, 255, 0.151);
+        height: 100%;
+        width: 1px;
+
+        @include xl {
+            left: 64px;
+          }
+
+        @include lg {
+            left: 12px;
+          }
+
+        @include sm {
+            display: none;
+          }
+    }
+
+    &::after {
+        content: '';
+        position: absolute;
+        right: 160px;
+        bottom: 0;
+        background-color: rgba(255, 255, 255, 0.151);
+        height: 100%;
+        width: 1px;
+
+        @include xl {
+            right: 64px;
+          }
+
+        @include lg {
+            right: 12px;
+          }
+
+        @include sm {
+            display: none;
+          }
+    }
+
+    .footer-content-container {
+        display: flex;
+        justify-content: space-between;
+        margin: 0 160px;
+        color: $h-white;
+        gap: 400px;
+
+        @include xl {
+          margin: 0 64px;
+        }
+
+        @include lg {
+          margin: 0 12px;
+          flex-direction: column;
+          align-items: center;
+          padding: 96px 24px;
+        }
+
+        @include sm {
+          margin: 0;
+        }
+        
+
+        .personal-info-container {
+            display: flex;
+            flex-direction: column;
+            max-width: 460px;
+            margin: 96px 0 96px 56px;
+            gap: 40px;
+
+            @include lg {
+              margin: 0;
+              align-items: center;
+            }
+  
+            .name-and-img{
+              display: flex;
+              align-items: center;
+              gap: 24px;
+
+              @include lg {
+                flex-direction: column;
+              }
+
+              .profile-img {
+                border-radius: 900px;
+                width: 96px;
+                height: 96px;
+                outline: 1px solid $h-gray;
+                outline-offset: 6px;
+              }
+
+              .name-container {
+                display: flex;
+                align-items: baseline;
+                gap: 8px;
+
+                .name {
+                  @include H3-bold;
+                  line-height: none;
+                }
+
+                .footer-detail {
+                  transform: translateY(2px);
+
+                }
+              }
+            }
+            .footer-description {
+              @include body--small;
+              opacity: .6;
+
+              @include lg {
+                text-align: center
+              }
+            }
+            .copyrights {
+              @include caption;
+              opacity: .2;
+
+              @include lg {
+                display: none;
+              }
+            }
+        }
+
+        .cv-and-social-container {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          margin-right: 10%;
+          gap: 56px;
+
+          @include xl {
+            margin-right: 5%;
+          }
+
+          @include lg {
+            margin: 0;
+          }
+
+          .cv-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 14px;
+
+            .cv-title {
+              @include body;
+            }
+          }
+          .social-media-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 14px;
+
+            .social-media-title {
+              @include body;
+            }
+
+            .social-media-icons-container {
+              display: flex;
+              gap: 20px;
+            }
+          }
+        }
+    }
+}
