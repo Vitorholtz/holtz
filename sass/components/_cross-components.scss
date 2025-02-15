@@ -64,3 +64,60 @@
         transform: rotate(180deg);
     }
 }
+
+// Corte das bordas
+
+.border-details {
+    display: flex;
+    
+    &--footer span:nth-child(n+1)  {
+        background-color: $h-black;
+
+    }
+
+    .hero-detail-right {
+        display: block;
+        width: 160px;
+        height: 12px;
+        background-color: $h-white;
+        clip-path: polygon(92% 0%, 100% 102%, 0% 102%, 0 0%);
+    
+        @include xl {
+            width: 64px;
+            clip-path: polygon(78% 0%, 100% 106%, 0% 106%, 0 0%);
+          }
+    
+        @include lg {
+            width: 12px;
+            clip-path: polygon(0% 0%, 100% 102%, 0% 102%, 0 0%);
+          }
+    
+        @include sm {
+            display: none;
+          }
+    }
+    
+    
+    .hero-detail-left {
+        display: block;
+        margin-left: auto;
+        width: 160px;
+        height: 12px;
+        background-color: $h-white;
+        clip-path: polygon(100% 0%, 100% 102%, 0% 102%, 8% 0%);
+    
+        @include xl {
+            width: 64px;
+            clip-path: polygon(100% 0%, 100% 106%, 0% 106%, 22% 0%);
+          }
+    
+        @include lg {
+            width: 12px;
+            clip-path: polygon(100% 0%, 100% 102%, 0% 102%, 100% 0%);
+          }
+    
+        @include sm {
+            display: none;
+          }
+    }
+}

@@ -8,7 +8,6 @@ menuToggle.addEventListener('click', () => {
 })
 
 // header change on scroll
-
 $(window).scroll(function(){
     if ($(this).scrollTop() > 50) {
        $('.vh-header').addClass('vh-header--scroll-mode');
@@ -16,3 +15,21 @@ $(window).scroll(function(){
        $('.vh-header').removeClass('vh-header--scroll-mode');
     }
 });
+
+// Back to top btn
+var btn = $('.primary-btn--btt');
+
+$(window).scroll(function() {
+  if ($(window).scrollTop() > 50) {
+    btn.addClass('primary-btn--btt---show');
+  } else {
+    btn.removeClass('primary-btn--btt---show');
+  }
+});
+
+btn.on('click', function(e) {
+  e.preventDefault();
+  $('html, body').animate({scrollTop:0}, '300');
+});
+
+

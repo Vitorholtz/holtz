@@ -11,21 +11,32 @@
     z-index: 100;
 
     &--scroll-mode {
-        background-color: rgba(255, 255, 255, 0.840);
-        backdrop-filter: blur(8px);
+        background-color: rgba(255, 255, 255, 0.4);
+        backdrop-filter: blur(20px);
         border-bottom: 1px $h-border solid;
 
         .header-content-container {
-            max-width: none !important;
+            max-width: 100% !important;
             padding: 0 192px !important;
+
+            @include xl {
+                padding: 0 96px !important;
+            }
+
+            @include lg {
+                padding: 0 20px !important;
+            }
+
         }
 
         .nav-item {
             color: $h-black !important;
+            font-weight: 400 !important;
+            color: $h-gray !important;
 
             &::after {
-                background-color: $h-black !important;
-                opacity: .3 !important;
+                background-color: $h-gray !important;
+                opacity: .2 !important;
             }
 
             &:hover::after {
@@ -34,8 +45,8 @@
         }
 
         .nav-divider {
-            background-color: $h-black !important;
-            opacity: .3 !important;
+            background-color: $h-gray !important;
+            opacity: .2 !important;
         }
 
         .nav-toggle-line {
@@ -47,7 +58,8 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-        padding: 0 444px;
+        max-width: 1080px;
+        padding: 0 24px;
         margin: auto;
         transition: all .3s ease;
 
@@ -56,11 +68,11 @@
           }
           
         @include lg {
-            padding: 0px 40px;
+            padding: 0px 32px;
           }
 
         @include sm {
-            padding: 0px 16px;
+            padding: 0px 20px;
           }
 
         .logo-img {
@@ -90,7 +102,7 @@
                     height: 1px;
                     width: 32%;
                     background-color: $h-white;
-                    opacity: .5;
+                    opacity: .2;
                     transition: all 0.2s linear;
                 }
         
@@ -104,7 +116,7 @@
                 height: 12px;
                 width: 1px;
                 background-color: $h-white;
-                opacity: .5;
+                opacity: .2;
             }
         }
 

@@ -3,9 +3,14 @@
 .vh-hero {
     position: relative;
     display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     height: 860px;
     width: 100%;
     background-color: $h-accent-blue;
+    background: linear-gradient(-45deg, #4053FD, #ff4040, #4053FD, #ff19ec);
+    background-size: 500% 300%;
+    animation: gradient 15s ease infinite;
     
     @include xl {
       height: 680px;
@@ -61,18 +66,18 @@
         display: flex;
         align-items: center;
         max-width: 1080px;
-        margin: 38px auto 0px auto;
+        margin: 180px auto 0px auto;
         color: $h-white;
         gap: 80px;
         padding: 0px 24px;
 
         @include xl {
             max-width: 960px;
-            gap: 40px;
+            margin-top: 120px;
+            gap: 56px;
           }  
 
         @include lg {
-            margin-top: 112px;
             margin-bottom: 40px;
             padding: 0px 40px;
           }
@@ -118,66 +123,6 @@
             animation: float 6s ease-in-out infinite;
             max-width: 480px;
         }
-    }
-
-    .hero-detail-right {
-        position: absolute;
-        bottom: 0;
-        width: 160px;
-        height: 12px;
-        background-color: $h-white;
-        left: 0;
-
-        @include xl {
-            width: 64px;
-          }
-
-        @include lg {
-            width: 12px;
-          }
-
-        @include sm {
-            display: none;
-          }
-          
-        &::after {
-            position: absolute;
-            content: "";
-            border-top: 12px solid $h-accent-blue;
-            border-bottom: 12px solid transparent;
-            border-left: 12px solid transparent;
-            right: 0; 
-        }
-    }
-
-    .hero-detail-left {
-        position: absolute;
-        bottom: 0;
-        width: 160px;
-        height: 12px;
-        background-color: $h-white;
-        right: 0;
-
-        &::after {
-            position: absolute;
-            content: "";
-            border-top: 12px solid $h-accent-blue;
-            border-bottom: 12px solid transparent;
-            border-right: 12px solid transparent;
-            left: 0;
-        }
-
-        @include xl {
-            width: 64px;
-          }
-
-        @include lg {
-            width: 12px;
-          }
-
-        @include sm {
-            display: none;
-          }
     }
 
 }

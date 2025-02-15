@@ -95,9 +95,26 @@
             }
   
             .name-and-img{
+              position: relative;
               display: flex;
               align-items: center;
               gap: 24px;
+
+              
+              &::before {
+                content: '';
+                position: absolute;
+                width: 4px;
+                height: 100%;
+                left: -56px;
+                background-color: $h-gray;
+                border-radius: 0 96px 96px 0;
+
+                @include lg {
+                  display: none;
+                }
+              }
+      
 
               @include lg {
                 flex-direction: column;
@@ -123,7 +140,18 @@
 
                 .footer-detail {
                   transform: translateY(2px);
+                  display: none;
 
+                  @include lg {
+                    display: block;
+                  }
+
+                  &:nth-child(1) {
+                    transform: scale(-1, 1);
+                  }
+                  &:nth-child(3) {
+                    display: block;
+                  }
                 }
               }
             }
