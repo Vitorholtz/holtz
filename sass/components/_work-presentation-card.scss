@@ -7,6 +7,10 @@
     border-top: 1px $h-border solid;
     border-bottom: 1px $h-border solid;
 
+    &--last-one {
+        margin-bottom: 80px !important;
+    }
+
     @include xl {
         margin: 0 64px 160px 64px;
     }

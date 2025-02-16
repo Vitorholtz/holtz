@@ -288,7 +288,7 @@ svg {
 }
 @media (max-width: 1080px) {
   .vh-header--scroll-mode .header-content-container {
-    padding: 0 20px !important;
+    padding: 0 32px !important;
   }
 }
 .vh-header--scroll-mode .nav-item {
@@ -314,19 +314,29 @@ svg {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  max-width: 1080px;
+  max-width: 1200px;
   padding: 0 24px;
   margin: auto;
   transition: all 0.3s ease;
 }
-@media (max-width: 1380px) {
+@media (max-width: 1520px) {
+  .vh-header .header-content-container {
+    max-width: 1080px;
+  }
+}
+@media (max-width: 1200px) {
   .vh-header .header-content-container {
     max-width: 960px;
   }
 }
 @media (max-width: 1080px) {
   .vh-header .header-content-container {
-    padding: 0px 32px;
+    padding: 0px 44px;
+  }
+}
+@media (max-width: 780px) {
+  .vh-header .header-content-container {
+    padding: 0 32px;
   }
 }
 @media (max-width: 480px) {
@@ -479,23 +489,11 @@ svg {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  height: 860px;
   width: 100%;
   background-color: #4053FD;
   background: linear-gradient(-45deg, #4053FD, #ff4040, #4053FD, #ff19ec);
   background-size: 500% 300%;
   animation: gradient 15s ease infinite;
-}
-@media (max-width: 1380px) {
-  .vh-hero {
-    height: 680px;
-  }
-}
-@media (max-width: 1080px) {
-  .vh-hero {
-    height: -moz-fit-content;
-    height: fit-content;
-  }
 }
 .vh-hero::after {
   content: "";
@@ -546,29 +544,29 @@ svg {
 .vh-hero .hero-content-container {
   display: flex;
   align-items: center;
-  max-width: 1080px;
-  margin: 180px auto 0px auto;
+  max-width: 1200px;
+  margin: 180px auto 120px auto;
   color: #ffffff;
   gap: 80px;
-  padding: 0px 24px;
+  padding: 0 24px;
 }
-@media (max-width: 1380px) {
+@media (max-width: 1520px) {
   .vh-hero .hero-content-container {
-    max-width: 960px;
-    margin-top: 120px;
+    max-width: 1080px;
+    margin: 156px auto 72px auto;
     gap: 56px;
   }
 }
-@media (max-width: 1080px) {
-  .vh-hero .hero-content-container {
-    margin-bottom: 40px;
-    padding: 0px 40px;
-  }
-}
-@media (max-width: 780px) {
+@media (max-width: 1200px) {
   .vh-hero .hero-content-container {
     flex-direction: column;
-    padding: 0px 24px;
+    padding: 0 24px;
+    gap: 80px;
+  }
+}
+@media (max-width: 480px) {
+  .vh-hero .hero-content-container {
+    margin: 112px auto 52px auto;
   }
 }
 .vh-hero .hero-content-container .cta-container {
@@ -577,14 +575,9 @@ svg {
   gap: 32px;
   align-items: baseline;
   justify-content: center;
-  max-width: 460px;
+  max-width: 540px;
 }
-@media (max-width: 1080px) {
-  .vh-hero .hero-content-container .cta-container {
-    max-width: 100%;
-  }
-}
-@media (max-width: 780px) {
+@media (max-width: 1200px) {
   .vh-hero .hero-content-container .cta-container {
     max-width: 100%;
     align-items: center;
@@ -595,23 +588,30 @@ svg {
   font-weight: 700;
   font-size: 4.8rem;
   line-height: 1.16;
+  font-size: 5.6rem;
 }
-@media (max-width: 1080px) {
+@media (max-width: 1520px) {
+  .vh-hero .hero-content-container .cta-container .hero-cta {
+    font-size: 4.8rem;
+  }
+}
+@media (max-width: 1200px) {
+  .vh-hero .hero-content-container .cta-container .hero-cta {
+    text-align: center;
+  }
+}
+@media (max-width: 480px) {
   .vh-hero .hero-content-container .cta-container .hero-cta {
     font-family: "Whyte";
     font-weight: 700;
     font-size: 3.2rem;
     line-height: 1.25;
-  }
-}
-@media (max-width: 780px) {
-  .vh-hero .hero-content-container .cta-container .hero-cta {
-    text-align: center;
+    font-size: 3.6rem;
   }
 }
 .vh-hero .hero-content-container .hero-img-container {
   animation: float 6s ease-in-out infinite;
-  max-width: 480px;
+  max-width: 520px;
 }
 
 .primary-btn {
@@ -801,6 +801,7 @@ svg {
   display: flex;
   flex-direction: column;
   align-items: center;
+  text-align: center;
 }
 .vh-title-container .vh-title {
   font-family: "Whyte";
@@ -822,7 +823,6 @@ svg {
   font-size: 2rem;
   line-height: 1.4;
   color: #4A4F57;
-  text-align: center;
   max-width: 480px;
   margin: 16px 0 32px 0;
 }
@@ -875,6 +875,7 @@ svg {
 }
 .border-details--footer span:nth-child(n+1) {
   background-color: #2B2B36;
+  margin-top: 52px;
 }
 .border-details .hero-detail-right {
   display: block;
@@ -1090,6 +1091,9 @@ svg {
   margin: 0 160px 160px 160px;
   border-top: 1px #E0E0E3 solid;
   border-bottom: 1px #E0E0E3 solid;
+}
+.work-presentation-card--last-one {
+  margin-bottom: 80px !important;
 }
 @media (max-width: 1380px) {
   .work-presentation-card {

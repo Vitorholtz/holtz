@@ -5,6 +5,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    text-align: center;
 
     .vh-title {
         @include H2-bold;
@@ -16,7 +17,6 @@
     .ending-text {
         @include body--large;
         color: $h-gray ;
-        text-align: center;
         max-width: 480px;
         margin: 16px 0 32px 0;
 
@@ -66,12 +66,12 @@
 }
 
 // Corte das bordas
-
 .border-details {
     display: flex;
-    
+
     &--footer span:nth-child(n+1)  {
         background-color: $h-black;
+        margin-top: 52px;
 
     }
 
@@ -96,7 +96,6 @@
             display: none;
           }
     }
-    
     
     .hero-detail-left {
         display: block;

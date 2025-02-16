@@ -24,7 +24,7 @@
             }
 
             @include lg {
-                padding: 0 20px !important;
+                padding: 0 32px !important;
             }
 
         }
@@ -58,17 +58,25 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-        max-width: 1080px;
+        max-width: 1200px;
         padding: 0 24px;
         margin: auto;
         transition: all .3s ease;
 
-        @include xl {
+        @include breakpoint(1520px) {
+            max-width: 1080px;
+          } 
+
+        @include breakpoint(1200px) {
             max-width: 960px;
-          }
+          } 
           
         @include lg {
-            padding: 0px 32px;
+            padding: 0px 44px;
+          }
+
+        @include md {
+            padding: 0 32px;
           }
 
         @include sm {
