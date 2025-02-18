@@ -5,6 +5,7 @@
     font-weight: 400;
     font-size: 4.8rem;
     line-height: 1.16;
+    letter-spacing: -2px;
 }
 
 @mixin H1-bold{
@@ -12,6 +13,7 @@
     font-weight: 700;
     font-size: 4.8rem;
     line-height: 1.16;
+    letter-spacing: -2px;
 }
 
 // 
@@ -21,6 +23,7 @@
     font-weight: 400;
     font-size: 4rem;
     line-height: 1.2;
+    letter-spacing: -1px;
 }
 
 @mixin H2-bold{
@@ -28,6 +31,7 @@
     font-weight: 700;
     font-size: 4rem;
     line-height: 1.2;
+    letter-spacing: -1px;
 }
 
 //
@@ -37,6 +41,7 @@
     font-weight: 400;
     font-size: 3.2rem;
     line-height: 1.25;
+    letter-spacing: -1px;
 }
 
 @mixin H3-bold{
@@ -44,6 +49,7 @@
     font-weight: 700;
     font-size: 3.2rem;
     line-height: 1.25;
+    letter-spacing: -1px;
 }
 
 //

@@ -2,30 +2,45 @@
 
 .primary-btn {
     @include body-bold;
+    color: $h-black;
     display: flex;
+    justify-content: center;
     width:fit-content;
     padding: 12px 20px;
-    justify-content: center;
     align-items: center;
     border-radius: 16px;
     border: 1px solid $h-black;
     background: $h-white;
     box-shadow: 0px 4px 0px 0px $h-black;
-    color: $h-black;
+    line-height: none;
+    overflow: hidden;
     cursor: pointer;
     transition: .3s ease;
 
     &:hover {
         transform: translateY(6px);
         box-shadow: 0px 0px 0px 0px $h-black;
+
+        @include lg {
+        transform: none;
+        box-shadow: 0px 4px 0px 0px $h-black;
+        }
     }
 
+    &:active { 
+        @include lg {
+        transform: translateY(6px);
+        box-shadow: 0px 0px 0px 0px $h-black;
+        transition: .2s ease-out;
+         }
+    }
+        
     &--btt {
         position: fixed;
         bottom: -100%;
         right: 0;
         padding: 12px;
-        border-radius: 900px;
+        border-radius: 100%;
 
         @include md {
             padding: 10px;

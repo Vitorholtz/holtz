@@ -256,11 +256,6 @@ svg {
   background: #ffffff;
 }
 
-/* Handle on hover */
-::-webkit-scrollbar-thumb:hover {
-  background: #4053FD;
-}
-
 .vh-header {
   position: fixed;
   top: 0;
@@ -291,6 +286,11 @@ svg {
     padding: 0 32px !important;
   }
 }
+@media (max-width: 480px) {
+  .vh-header--scroll-mode .header-content-container {
+    padding: 0 20px !important;
+  }
+}
 .vh-header--scroll-mode .nav-item {
   color: #2B2B36 !important;
   font-weight: 400 !important;
@@ -314,7 +314,7 @@ svg {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  max-width: 1200px;
+  max-width: 1180px;
   padding: 0 24px;
   margin: auto;
   transition: all 0.3s ease;
@@ -560,13 +560,20 @@ svg {
 @media (max-width: 1200px) {
   .vh-hero .hero-content-container {
     flex-direction: column;
-    padding: 0 24px;
+    max-width: 720px;
     gap: 80px;
+  }
+}
+@media (max-width: 780px) {
+  .vh-hero .hero-content-container {
+    max-width: 100%;
+    padding: 0 32px;
   }
 }
 @media (max-width: 480px) {
   .vh-hero .hero-content-container {
     margin: 112px auto 52px auto;
+    padding: 0 24px;
   }
 }
 .vh-hero .hero-content-container .cta-container {
@@ -575,7 +582,7 @@ svg {
   gap: 32px;
   align-items: baseline;
   justify-content: center;
-  max-width: 540px;
+  max-width: 520px;
 }
 @media (max-width: 1200px) {
   .vh-hero .hero-content-container .cta-container {
@@ -588,6 +595,7 @@ svg {
   font-weight: 700;
   font-size: 4.8rem;
   line-height: 1.16;
+  letter-spacing: -2px;
   font-size: 5.6rem;
 }
 @media (max-width: 1520px) {
@@ -606,11 +614,12 @@ svg {
     font-weight: 700;
     font-size: 3.2rem;
     line-height: 1.25;
-    font-size: 3.6rem;
+    letter-spacing: -1px;
+    font-size: 3.4rem;
   }
 }
 .vh-hero .hero-content-container .hero-img-container {
-  animation: float 6s ease-in-out infinite;
+  animation: float 4s ease-in-out infinite;
   max-width: 520px;
 }
 
@@ -619,17 +628,19 @@ svg {
   font-weight: 700;
   font-size: 1.8rem;
   line-height: 1.33;
+  color: #2B2B36;
   display: flex;
+  justify-content: center;
   width: -moz-fit-content;
   width: fit-content;
   padding: 12px 20px;
-  justify-content: center;
   align-items: center;
   border-radius: 16px;
   border: 1px solid #2B2B36;
   background: #ffffff;
   box-shadow: 0px 4px 0px 0px #2B2B36;
-  color: #2B2B36;
+  line-height: none;
+  overflow: hidden;
   cursor: pointer;
   transition: 0.3s ease;
 }
@@ -637,12 +648,25 @@ svg {
   transform: translateY(6px);
   box-shadow: 0px 0px 0px 0px #2B2B36;
 }
+@media (max-width: 1080px) {
+  .primary-btn:hover {
+    transform: none;
+    box-shadow: 0px 4px 0px 0px #2B2B36;
+  }
+}
+@media (max-width: 1080px) {
+  .primary-btn:active {
+    transform: translateY(6px);
+    box-shadow: 0px 0px 0px 0px #2B2B36;
+    transition: 0.2s ease-out;
+  }
+}
 .primary-btn--btt {
   position: fixed;
   bottom: -100%;
   right: 0;
   padding: 12px;
-  border-radius: 900px;
+  border-radius: 100%;
 }
 @media (max-width: 780px) {
   .primary-btn--btt {
@@ -808,6 +832,7 @@ svg {
   font-weight: 700;
   font-size: 4rem;
   line-height: 1.2;
+  letter-spacing: -1px;
 }
 @media (max-width: 1380px) {
   .vh-title-container .vh-title {
@@ -815,6 +840,7 @@ svg {
     font-weight: 700;
     font-size: 3.2rem;
     line-height: 1.25;
+    letter-spacing: -1px;
   }
 }
 .vh-title-container .ending-text {
@@ -1017,6 +1043,7 @@ svg {
   font-weight: 700;
   font-size: 3.2rem;
   line-height: 1.25;
+  letter-spacing: -1px;
   margin-bottom: 24px;
   text-align: center;
 }
@@ -1131,6 +1158,7 @@ svg {
   font-weight: 700;
   font-size: 4rem;
   line-height: 1.2;
+  letter-spacing: -1px;
   position: relative;
   margin-bottom: 32px;
 }
@@ -1140,6 +1168,7 @@ svg {
     font-weight: 700;
     font-size: 3.2rem;
     line-height: 1.25;
+    letter-spacing: -1px;
   }
 }
 @media (max-width: 1080px) {
@@ -1357,6 +1386,7 @@ svg {
   font-weight: 700;
   font-size: 3.2rem;
   line-height: 1.25;
+  letter-spacing: -1px;
   line-height: none;
 }
 .vh-footer .footer-content-container .personal-info-container .name-and-img .name-container .footer-detail {
