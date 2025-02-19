@@ -28,7 +28,7 @@
         display: flex;
         flex-direction: column;
         justify-content: center;
-        max-width: 48%;
+        max-width: 46%;
         padding: 56px;
 
         @include lg {
@@ -89,6 +89,7 @@
         border-left: 1px $h-border solid;
         border-right: 1px $h-border solid;
         overflow: hidden;
+        background-color: $h-accent-blue;
 
         @include lg {
             width: 100%;

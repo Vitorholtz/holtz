@@ -623,84 +623,6 @@ svg {
   max-width: 520px;
 }
 
-.primary-btn {
-  font-family: "Whyte";
-  font-weight: 700;
-  font-size: 1.8rem;
-  line-height: 1.33;
-  color: #2B2B36;
-  display: flex;
-  justify-content: center;
-  width: -moz-fit-content;
-  width: fit-content;
-  padding: 12px 20px;
-  align-items: center;
-  border-radius: 16px;
-  border: 1px solid #2B2B36;
-  background: #ffffff;
-  box-shadow: 0px 4px 0px 0px #2B2B36;
-  line-height: none;
-  overflow: hidden;
-  cursor: pointer;
-  transition: 0.3s ease;
-}
-.primary-btn:hover {
-  transform: translateY(6px);
-  box-shadow: 0px 0px 0px 0px #2B2B36;
-}
-@media (max-width: 1080px) {
-  .primary-btn:hover {
-    transform: none;
-    box-shadow: 0px 4px 0px 0px #2B2B36;
-  }
-}
-@media (max-width: 1080px) {
-  .primary-btn:active {
-    transform: translateY(6px);
-    box-shadow: 0px 0px 0px 0px #2B2B36;
-    transition: 0.2s ease-out;
-  }
-}
-.primary-btn--btt {
-  position: fixed;
-  bottom: -100%;
-  right: 0;
-  padding: 12px;
-  border-radius: 100%;
-}
-@media (max-width: 780px) {
-  .primary-btn--btt {
-    padding: 10px;
-  }
-}
-@media (max-width: 780px) {
-  .primary-btn--btt .arrow-up-icon {
-    max-width: 20px;
-  }
-}
-.primary-btn--btt---show {
-  bottom: 48px;
-  right: 54px;
-}
-@media (max-width: 1380px) {
-  .primary-btn--btt---show {
-    bottom: 40px;
-    right: 40px;
-  }
-}
-@media (max-width: 1080px) {
-  .primary-btn--btt---show {
-    bottom: 20px;
-    right: 28px;
-  }
-}
-@media (max-width: 480px) {
-  .primary-btn--btt---show {
-    bottom: 16px;
-    right: 16px;
-  }
-}
-
 .intro-img {
   border-radius: 900px;
   width: 120px;
@@ -819,6 +741,84 @@ svg {
   .intro-text-container .intro-text::after {
     display: none;
   }
+}
+
+.primary-btn {
+  font-family: "Whyte";
+  font-weight: 700;
+  font-size: 1.8rem;
+  line-height: 1.33;
+  color: #2B2B36;
+  display: flex;
+  width: -moz-fit-content;
+  width: fit-content;
+  gap: 8px;
+  border-radius: 16px;
+  border: 1px solid #2B2B36;
+  background: #ffffff;
+  box-shadow: 0px 4px 0px 0px #2B2B36;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+.primary-btn:hover {
+  transform: translateY(6px);
+  box-shadow: 0px 0px 0px 0px #2B2B36;
+}
+@media (max-width: 1080px) {
+  .primary-btn:hover {
+    transform: none;
+    box-shadow: 0px 4px 0px 0px #2B2B36;
+  }
+}
+@media (max-width: 1080px) {
+  .primary-btn:active {
+    transform: translateY(6px);
+    box-shadow: 0px 0px 0px 0px #2B2B36;
+    transition: 0.2s ease-out;
+  }
+}
+.primary-btn--btt {
+  position: fixed;
+  bottom: -100%;
+  right: 0;
+  padding: 12px;
+  border-radius: 100%;
+}
+@media (max-width: 780px) {
+  .primary-btn--btt {
+    padding: 10px;
+    box-shadow: 0px 2px 0px 0px #2B2B36;
+  }
+}
+@media (max-width: 780px) {
+  .primary-btn--btt .arrow-up-icon {
+    max-width: 20px;
+  }
+}
+.primary-btn--btt---show {
+  bottom: 48px;
+  right: 54px;
+}
+@media (max-width: 1380px) {
+  .primary-btn--btt---show {
+    bottom: 40px;
+    right: 40px;
+  }
+}
+@media (max-width: 1080px) {
+  .primary-btn--btt---show {
+    bottom: 20px;
+    right: 28px;
+  }
+}
+@media (max-width: 480px) {
+  .primary-btn--btt---show {
+    bottom: 16px;
+    right: 16px;
+  }
+}
+.primary-btn .btn-icon {
+  transform: translateY(-1.5px);
 }
 
 .vh-title-container {
@@ -1142,7 +1142,7 @@ svg {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  max-width: 48%;
+  max-width: 46%;
   padding: 56px;
 }
 @media (max-width: 1080px) {
@@ -1220,6 +1220,7 @@ svg {
   border-left: 1px #E0E0E3 solid;
   border-right: 1px #E0E0E3 solid;
   overflow: hidden;
+  background-color: #4053FD;
 }
 @media (max-width: 1080px) {
   .work-presentation-card .work-card-img {
