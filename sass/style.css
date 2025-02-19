@@ -315,7 +315,7 @@ svg {
   justify-content: space-between;
   align-items: center;
   max-width: 1180px;
-  padding: 0 24px;
+  padding: 0 40px;
   margin: auto;
   transition: all 0.3s ease;
 }
@@ -345,7 +345,7 @@ svg {
   }
 }
 .vh-header .header-content-container .logo-img {
-  max-width: 80px;
+  max-width: 96px;
 }
 .vh-header .header-content-container .vh-nav-bar--header {
   display: flex;
@@ -753,7 +753,7 @@ svg {
   width: -moz-fit-content;
   width: fit-content;
   gap: 8px;
-  padding: 12px 20px 10px 20px;
+  padding: 14px 20px 12px 20px;
   border-radius: 16px;
   border: 1px solid #2B2B36;
   background: #ffffff;
@@ -1221,7 +1221,6 @@ svg {
   border-left: 1px #E0E0E3 solid;
   border-right: 1px #E0E0E3 solid;
   overflow: hidden;
-  background-color: #4053FD;
 }
 @media (max-width: 1080px) {
   .work-presentation-card .work-card-img {
