@@ -10,6 +10,7 @@
     background: linear-gradient(-45deg, #4053FD, #ff4040, #4053FD, #ff19ec);
     background-size: 500% 300%;
     animation: gradient 15s ease infinite;
+    overflow-x: clip;
     
     &::after {
         content: '';
