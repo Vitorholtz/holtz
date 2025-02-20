@@ -61,6 +61,7 @@
         color: $h-white;
         gap: 80px;
         padding: 0 24px;
+        position: relative;
 
         @include breakpoint(1520px) {
             max-width: 1080px;
