@@ -6,57 +6,9 @@
     width: 100vw;
     height: 72px;
     padding: 16px 0px;
-    background: transparent;
     transition: all .3s ease;
-    z-index: 100;
-
-    &--scroll-mode {
-        background-color: rgba(255, 255, 255, 0.4);
-        backdrop-filter: blur(20px);
-        border-bottom: 1px $h-border solid;
-
-        .header-content-container {
-            max-width: 100% !important;
-            padding: 0 192px !important;
-
-            @include xl {
-                padding: 0 96px !important;
-            }
-
-            @include lg {
-                padding: 0 32px !important;
-            }
-
-            @include sm {
-                padding: 0 20px !important;
-            }
-
-        }
-
-        .nav-item {
-            color: $h-black !important;
-            font-weight: 400 !important;
-            color: $h-gray !important;
-
-            &::after {
-                background-color: $h-gray !important;
-                opacity: .2 !important;
-            }
-
-            &:hover::after {
-                opacity: 1 !important;
-            }
-        }
-
-        .nav-divider {
-            background-color: $h-gray !important;
-            opacity: .2 !important;
-        }
-
-        .nav-toggle-line {
-            background-color: $h-black !important;
-        }
-    }
+    z-index: 1;
+    animation: smoothshow 2s both;
 
     .header-content-container {
         display: flex;
@@ -226,10 +178,62 @@
             animation: smoothshow 1s both;
         }
     }
+
+    &--scroll-mode {
+        background-color: rgba(255, 255, 255, 0.4);
+        backdrop-filter: blur(20px);
+        border-bottom: 1px $h-border solid;
+
+        .header-content-container {
+            max-width: 100%;
+            padding: 0 192px;
+
+            @include xl {
+                padding: 0 96px;
+            }
+
+            @include lg {
+                padding: 0 32px;
+            }
+
+            @include sm {
+                padding: 0 20px;
+            }
+
+            .vh-nav-bar--header {
+                .nav-item {
+                    color: $h-black;
+                    font-weight: 400;
+        
+                    &::after {
+                        background-color: $h-gray;
+                        opacity: .2;
+                    }
+        
+                    &:hover::after {
+                        opacity: 1;
+                    }
+                }
+                
+                .nav-divider {
+                    background-color: $h-gray;
+                    opacity: .2;
+                }
+            }
+        }
+
+        .mobile-menu-toggle {
+            .nav-toggle-line {
+                background-color: $h-black !important;
+            }
+        }
+    }
 }
 
-// Separar em um arquivo exclusivo para keyframes
 
+
+
+// Separar em um arquivo exclusivo para keyframes
 @keyframes smoothshow {
     0% {opacity: 0;}
     25% {opacity: 0;}

@@ -207,7 +207,7 @@
     bottom: -100%;
     height: 120px;
     width: 1px;
-    background: linear-gradient(to top, rgba(255, 255, 255, 0) 0%, #ffffff 75%, #ffffff 100%);
+    background: linear-gradient(to top, rgba(255, 255, 255, 0), rgba(255, 255, 255, ));
     animation: herolines 6s 0s infinite;
 
     &:nth-child(5) {
@@ -236,7 +236,6 @@
     }
     
 }
-
 
 @keyframes herolines {
 	0% {

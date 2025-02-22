@@ -4,3 +4,11 @@ $h-border: #E0E0E3;
 $h-gray: #4A4F57;
 $h-black: #2B2B36;
 $h-accent-blue: #4053FD;
+
+
+// Gradient animated background
+@mixin gradient_bg{
+    background: linear-gradient(-45deg, #FDEA3F, #FF4040, #4053FD, #4053FD);
+    background-size: 400% 200%;
+    animation: gradient 10s ease-in-out infinite;
+}
