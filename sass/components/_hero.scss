@@ -59,7 +59,7 @@
         gap: 80px;
         padding: 0 24px;
         position: relative;
-        animation: smoothshow 2s both;
+        z-index: 2;
 
         @include breakpoint(1520px) {
             max-width: 1080px;
@@ -115,8 +115,39 @@
         }
 
         .hero-img-container {
-            animation: float 4s ease-in-out infinite;
-            max-width: 520px;
+          position: relative;
+          animation: float 4s ease-in-out infinite;
+          max-width: 520px;
+
+            .hero-img-2 {
+              position: absolute;
+              top: 0;
+              left: 0;
+              animation: imgfade 10s infinite;
+            }
         }
     }
+
+    .hero-grid-bg-effect {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      opacity: 1;
+      background-image:  linear-gradient(#ffffff27 1px, transparent 1px), linear-gradient(to right, #ffffff27 1px, transparent 1px);
+      background-size: 88px 88px;
+      animation: hero-grid-animation 8s infinite ease;
+    }
+  }
+
+  
+@keyframes imgfade {
+	0% {
+		opacity: 1;
+	}
+	50% {
+		opacity: 0;
+	}
+  100% {
+		opacity: 1;
+	}
 }

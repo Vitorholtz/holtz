@@ -143,6 +143,18 @@ select {
     transform: translatey(0px);
   }
 }
+@keyframes hero-grid-animation {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    background-position: 0% -100%;
+    opacity: 0;
+  }
+}
 * {
   color: inherit;
   margin: 0;
@@ -412,6 +424,7 @@ svg {
 
 .border-details {
   display: flex;
+  z-index: 2;
 }
 .border-details--footer span:nth-child(n+1) {
   background-color: #2B2B36;
@@ -804,7 +817,7 @@ svg {
   gap: 80px;
   padding: 0 24px;
   position: relative;
-  animation: smoothshow 2s both;
+  z-index: 2;
 }
 @media (max-width: 1520px) {
   .vh-hero .hero-content-container {
@@ -873,10 +886,37 @@ svg {
   }
 }
 .vh-hero .hero-content-container .hero-img-container {
+  position: relative;
   animation: float 4s ease-in-out infinite;
   max-width: 520px;
 }
+.vh-hero .hero-content-container .hero-img-container .hero-img-2 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  animation: imgfade 10s infinite;
+}
+.vh-hero .hero-grid-bg-effect {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 1;
+  background-image: linear-gradient(rgba(255, 255, 255, 0.1529411765) 1px, transparent 1px), linear-gradient(to right, rgba(255, 255, 255, 0.1529411765) 1px, transparent 1px);
+  background-size: 120px 120px;
+  animation: hero-grid-animation 8s infinite ease;
+}
 
+@keyframes imgfade {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 .intro-img {
   border-radius: 100%;
   width: 120px;

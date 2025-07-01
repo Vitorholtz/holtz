@@ -147,6 +147,7 @@
 // Corte das bordas
 .border-details {
     display: flex;
+    z-index: 2;
 
     &--footer span:nth-child(n+1)  {
         background-color: $h-black;

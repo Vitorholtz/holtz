@@ -23,3 +23,17 @@
 		transform: translatey(0px);
 	}
 }
+
+@keyframes hero-grid-animation {
+	0% {
+		opacity: 0;
+	}
+	50% {
+		opacity: 1;
+	}
+
+	100% {
+		background-position: 0% -100%;
+		opacity: 0;
+	}
+}
