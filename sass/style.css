@@ -435,21 +435,18 @@ svg {
   width: 160px;
   height: 12px;
   background-color: #ffffff;
-  -webkit-clip-path: polygon(92% 0%, 100% 102%, 0% 102%, 0 0%);
-          clip-path: polygon(92% 0%, 100% 102%, 0% 102%, 0 0%);
+  clip-path: polygon(92% 0%, 100% 102%, 0% 102%, 0 0%);
 }
 @media (max-width: 1380px) {
   .border-details .hero-detail-right {
     width: 64px;
-    -webkit-clip-path: polygon(78% 0%, 100% 106%, 0% 106%, 0 0%);
-            clip-path: polygon(78% 0%, 100% 106%, 0% 106%, 0 0%);
+    clip-path: polygon(78% 0%, 100% 106%, 0% 106%, 0 0%);
   }
 }
 @media (max-width: 1080px) {
   .border-details .hero-detail-right {
     width: 12px;
-    -webkit-clip-path: polygon(0% 0%, 100% 102%, 0% 102%, 0 0%);
-            clip-path: polygon(0% 0%, 100% 102%, 0% 102%, 0 0%);
+    clip-path: polygon(0% 0%, 100% 102%, 0% 102%, 0 0%);
   }
 }
 @media (max-width: 480px) {
@@ -463,21 +460,18 @@ svg {
   width: 160px;
   height: 12px;
   background-color: #ffffff;
-  -webkit-clip-path: polygon(100% 0%, 100% 102%, 0% 102%, 8% 0%);
-          clip-path: polygon(100% 0%, 100% 102%, 0% 102%, 8% 0%);
+  clip-path: polygon(100% 0%, 100% 102%, 0% 102%, 8% 0%);
 }
 @media (max-width: 1380px) {
   .border-details .hero-detail-left {
     width: 64px;
-    -webkit-clip-path: polygon(100% 0%, 100% 106%, 0% 106%, 22% 0%);
-            clip-path: polygon(100% 0%, 100% 106%, 0% 106%, 22% 0%);
+    clip-path: polygon(100% 0%, 100% 106%, 0% 106%, 22% 0%);
   }
 }
 @media (max-width: 1080px) {
   .border-details .hero-detail-left {
     width: 12px;
-    -webkit-clip-path: polygon(100% 0%, 100% 102%, 0% 102%, 100% 0%);
-            clip-path: polygon(100% 0%, 100% 102%, 0% 102%, 100% 0%);
+    clip-path: polygon(100% 0%, 100% 102%, 0% 102%, 100% 0%);
   }
 }
 @media (max-width: 480px) {
@@ -532,7 +526,7 @@ svg {
   height: 72px;
   padding: 16px 0px;
   transition: all 0.3s ease;
-  z-index: 1;
+  z-index: 3;
   animation: smoothshow 2s both;
 }
 .vh-header .header-content-container {
@@ -902,7 +896,7 @@ svg {
   height: 100%;
   opacity: 1;
   background-image: linear-gradient(rgba(255, 255, 255, 0.1529411765) 1px, transparent 1px), linear-gradient(to right, rgba(255, 255, 255, 0.1529411765) 1px, transparent 1px);
-  background-size: 120px 120px;
+  background-size: 88px 88px;
   animation: hero-grid-animation 8s infinite ease;
 }
 
