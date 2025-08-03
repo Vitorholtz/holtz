@@ -7,13 +7,24 @@
     align-items: center;
     width: fit-content;
     border: 1px $h-border solid;
-    transition: all .3s ease;
+    transition: all .3s cubic-bezier(1, 0, .3, 1);
+
+    &--hero {
+        outline: 1px solid rgba(255, 255, 255, 0.6);
+        outline-offset: 8px;
+        margin-left: 8px;
+
+        @include breakpoint(1520px) {
+            margin-left: 0
+        }
+    }
 
     .btn-text {
         @include H4-bold;
         color: $h-black;
         padding: 24px 32px;
         border-right: 1px $h-border solid;
+        transition: all .3s cubic-bezier(1, 0, .3, 1);
 
         &--small {
             @include body--large-bold;
@@ -29,18 +40,23 @@
         .icon-black {
             position: absolute;
             transform: translate(-50%, -50%);
-            transition: all .3s ease;
+            transition: all .3s cubic-bezier(1, 0, .3, 1);
         }
 
         .icon-white {
             position: absolute;
             transform: translate(-250%, -50%);
-            transition: all .3s ease;
+            transition: all .3s cubic-bezier(1, 0, .3, 1);
+
+            &--upper-animation {
+                transform: translate(-50%, -250%);
+            }
         }
     }
 
     &:hover {
         background-color: $h-black;
+        outline-offset: 0px;
 
         .btn-text {
             color: $h-white;
@@ -49,6 +65,10 @@
         .btn-icon-container {
             .icon-black {
                 transform: translate(200%, -50%);
+
+                &--upper-animation {
+                    transform: translate(-50%, 250%);
+                }
             }
 
             .icon-white {

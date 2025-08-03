@@ -108,8 +108,7 @@
                   }
 
                   @include sm {
-                    @include H3-bold;
-                    font-size: 3.4rem;
+                    @include H2-bold;
                   }
             }
         }

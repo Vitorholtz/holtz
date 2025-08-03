@@ -275,7 +275,17 @@ svg {
   width: -moz-fit-content;
   width: fit-content;
   border: 1px #E0E0E3 solid;
-  transition: all 0.3s ease;
+  transition: all 0.3s cubic-bezier(1, 0, 0.3, 1);
+}
+.primary-btn--hero {
+  outline: 1px solid rgba(255, 255, 255, 0.6);
+  outline-offset: 8px;
+  margin-left: 8px;
+}
+@media (max-width: 1520px) {
+  .primary-btn--hero {
+    margin-left: 0;
+  }
 }
 .primary-btn .btn-text {
   font-family: "Whyte";
@@ -285,6 +295,7 @@ svg {
   color: #2B2B36;
   padding: 24px 32px;
   border-right: 1px #E0E0E3 solid;
+  transition: all 0.3s cubic-bezier(1, 0, 0.3, 1);
 }
 .primary-btn .btn-text--small {
   font-family: "Whyte";
@@ -301,21 +312,28 @@ svg {
 .primary-btn .btn-icon-container .icon-black {
   position: absolute;
   transform: translate(-50%, -50%);
-  transition: all 0.3s ease;
+  transition: all 0.3s cubic-bezier(1, 0, 0.3, 1);
 }
 .primary-btn .btn-icon-container .icon-white {
   position: absolute;
   transform: translate(-250%, -50%);
-  transition: all 0.3s ease;
+  transition: all 0.3s cubic-bezier(1, 0, 0.3, 1);
+}
+.primary-btn .btn-icon-container .icon-white--upper-animation {
+  transform: translate(-50%, -250%);
 }
 .primary-btn:hover {
   background-color: #2B2B36;
+  outline-offset: 0px;
 }
 .primary-btn:hover .btn-text {
   color: #ffffff;
 }
 .primary-btn:hover .btn-icon-container .icon-black {
   transform: translate(200%, -50%);
+}
+.primary-btn:hover .btn-icon-container .icon-black--upper-animation {
+  transform: translate(-50%, 250%);
 }
 .primary-btn:hover .btn-icon-container .icon-white {
   transform: translate(-50%, -50%);
@@ -944,10 +962,9 @@ svg {
   .vh-hero .hero-content-container .cta-container .hero-cta {
     font-family: "Whyte";
     font-weight: 700;
-    font-size: 3.2rem;
-    line-height: 1.25;
+    font-size: 4rem;
+    line-height: 1.2;
     letter-spacing: -1px;
-    font-size: 3.4rem;
   }
 }
 .vh-hero .hero-content-container .hero-img-container {
