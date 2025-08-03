@@ -1,0 +1,120 @@
+@use "../styles" as *;
+
+.project-intro-hero {
+    display: flex;
+    background-color: $repo-accent-green;
+    margin-bottom: 160px;
+    
+    &::after {
+        content: '';
+        position: absolute;
+        right: 160px;
+        background-color: rgba(255, 255, 255, 0.151);
+        height: 100%;
+        width: 1px;
+
+        @include xl {
+            right: 64px;
+          }
+
+        @include lg {
+            right: 12px;
+          }
+
+        @include sm {
+            display: none;
+          }
+    }
+
+    &::before {
+        content: '';
+        position: absolute;
+        left: 160px;
+        background-color: rgba(255, 255, 255, 0.151);
+        height: 100%;
+        width: 1px;
+
+        @include xl {
+            left: 64px;
+          }
+
+        @include lg {
+            left: 12px;
+          }
+
+        @include sm {
+            display: none;
+          }
+    }
+
+    .hero-content-container {
+        display: flex;
+        margin: 180px auto auto auto;
+        color: $h-white;
+        gap: 80px;
+        padding: 0 24px;
+        z-index: 2;
+
+        @include breakpoint(1520px) {
+            max-width: 1080px;
+            margin: 156px auto auto auto;
+            gap: 56px;
+        }
+
+        @include breakpoint(1200px) {
+            flex-direction: column;
+            max-width: 720px;
+            gap: 80px;
+            align-items: center
+          }
+
+        @include sm {
+            margin: 112px auto auto auto;
+            padding: 0 24px;
+          }
+
+        .title-and-index-container {
+            display: flex;
+            flex-direction: column;
+            gap: 32px;
+            max-width: 520px;
+
+            @include breakpoint(1200px) {
+                max-width: 100%;
+                align-items: center
+            }
+
+            .hero-cta {
+                @include H1-bold;
+                font-size: 5.6rem;
+
+                @include breakpoint(1200px) {
+                    text-align: center;
+                }
+
+                @include md {
+                    @include H2-bold;
+                }
+            }
+
+            .project-index{
+                display: flex;
+                align-items: center;
+                gap: 6px;
+
+                .index-link {
+                    @include body--small;
+
+                     &:first-child {
+                        @include body--small-semibold;
+                        color: $repo-green;
+                     }
+                }
+
+                .index-arrow-icon {
+                    width: 16px;
+                }
+            }
+        }
+    }
+}
