@@ -10,13 +10,16 @@
     transition: all .3s cubic-bezier(1, 0, .3, 1);
 
     &--hero {
-        outline: 1px solid rgba(255, 255, 255, 0.6);
+        background-color: rgba(255, 255, 255, 0);
+        backdrop-filter: blur(24px);
+        outline: 1px solid rgba(255, 255, 255, 0.2);
         outline-offset: 8px;
-        margin-left: 8px;
+        border-width: 2px;
 
-        @include breakpoint(1520px) {
-            margin-left: 0
+        .btn-text {
+            color: white !important;
         }
+
     }
 
     .btn-text {
@@ -56,7 +59,7 @@
 
     &:hover {
         background-color: $h-black;
-        outline-offset: 0px;
+        outline-offset: 24px;
 
         .btn-text {
             color: $h-white;
@@ -64,7 +67,7 @@
 
         .btn-icon-container {
             .icon-black {
-                transform: translate(200%, -50%);
+                transform: translate(250%, -50%);
 
                 &--upper-animation {
                     transform: translate(-50%, 250%);
@@ -74,6 +77,65 @@
             .icon-white {
                 transform: translate(-50%, -50%);
             }
+        }
+    }
+}
+
+// back to top button
+.btt-btn {
+    position: fixed;
+    background-color: $h-white;
+    border: 1px $h-border solid;
+    bottom: -100%;
+    right: 0;
+    padding: 24px;
+    transition: all .3s cubic-bezier(1, 0, .3, 1);
+    overflow: hidden;
+    cursor: pointer;
+
+    .icon-black {
+        position: absolute;
+        transform: translate(-50%, -50%) rotate(-90deg);
+        transition: all .3s cubic-bezier(1, 0, .3, 1);
+    }
+
+    .icon-white {
+        position: absolute;
+        transform: translate(-50%, 100%) rotate(-90deg);
+        transition: all .3s cubic-bezier(1, 0, .3, 1);
+    }
+
+    &:hover {
+        background-color: $h-black;
+
+        .icon-black {
+            transform: translate(-50%, -200%) rotate(-90deg);
+        }
+
+        .icon-white {
+            transform: translate(-50%, -50%) rotate(-90deg);
+        }
+
+    }
+
+
+    &--show {
+        bottom: 48px;
+        right: 54px;
+
+        @include xl {
+            bottom: 40px;
+            right: 40px;
+        }
+
+        @include lg {
+            bottom: 20px;
+            right: 28px;
+        }
+
+        @include sm {
+            bottom: 16px;
+            right: 16px;
         }
     }
 }
@@ -228,6 +290,10 @@
     z-index: -100;
     border-left: 1px $h-border solid;
     border-right: 1px $h-border solid;
+
+    @include breakpoint(1520px) {
+        display: none;
+    }
 }
 
 
@@ -238,7 +304,7 @@
     align-items: center;
     max-width: 640px;
     margin: auto;
-
+    
     .vh-title {
         @include H2-bold;
         text-align: center;
@@ -246,7 +312,15 @@
 
         &--left {
             text-align: left;
-            margin: 160px auto 48px auto;
+            margin: 120px auto 48px auto;
+
+            @include md {
+                padding: 0 32px;
+            }
+
+            @include sm {
+                padding: 0 20px;
+            }
         }
 
         @include xl {
@@ -279,30 +353,71 @@
     display: flex;
     flex-direction: column;
     gap: 48px;
-    max-width: 1080px;
-    margin: auto;
+    margin: 0px 160px 0 160px;
+
+    @include xl {
+        margin: 0px 64px 0 64px;
+    }
+
+    @include lg {
+        margin: 0px 12px 0 12px;
+    }
+
+    @include sm {
+        margin: 0px 0px 0 0px;
+    }
 
     .text {
         color: $h-gray ;
         max-width: 640px;
         margin: auto;
         @include body--large;
+
+        @include md {
+            padding: 0 32px;
+        }
+
+        @include sm {
+            @include body;
+            padding: 0 20px;
+        }
     }
 }
 
 // Lista
 .text-list-container {
-    max-width: 1080px;
-    margin: 48px auto;
+    margin: 48px 160px 48px 160px;
+
+    @include xl {
+        margin: 48px 64px 48px 64px;
+    }
+
+    @include lg {
+        margin: 48px 12px 48px 12px;
+    }
+
+    @include sm {
+        margin: 48px 0 48px 0;
+    }
 
     .list {
-        list-style-type: disc;
         max-width: 640px;
         margin: auto;
-        @include body--large;
+        list-style-type: disc;
+
+        @include md {
+            padding: 0 32px;
+        }
+
+        @include sm {
+            @include body;
+            padding: 0 20px;
+        }
 
         .list-item {
+            @include body--large;
             color: $h-gray ;
+            margin-left: 24px;
 
             &:not(:first-child) {
                 margin-top: 14px;

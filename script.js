@@ -17,13 +17,13 @@ $(window).scroll(function(){
 });
 
 // Back to top btn
-var btn = $('.primary-btn--btt');
+var btn = $('.btt-btn');
 
 $(window).scroll(function() {
   if ($(window).scrollTop() > 50) {
-    btn.addClass('primary-btn--btt---show');
+    btn.addClass('btt-btn--show');
   } else {
-    btn.removeClass('primary-btn--btt---show');
+    btn.removeClass('btt-btn--show');
   }
 });
 
