@@ -447,11 +447,11 @@
 
         &:first-child {
             border-right: 1px $h-border solid;
-            background-image: url("/assets/images/ux-skill.png");
+            background-image: url("../assets/images/ux-skill.png");
         }
 
         &:last-child {
-            background-image: url("/assets/images/ui-skill.png");
+            background-image: url("../assets/images/ui-skill.png");
         }
 
         .section-title {

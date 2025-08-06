@@ -715,10 +715,10 @@ svg {
 }
 .sections-cards-container .section-card:first-child {
   border-right: 1px #E0E0E3 solid;
-  background-image: url("/assets/images/ux-skill.png");
+  background-image: url("../assets/images/ux-skill.png");
 }
 .sections-cards-container .section-card:last-child {
-  background-image: url("/assets/images/ui-skill.png");
+  background-image: url("../assets/images/ui-skill.png");
 }
 .sections-cards-container .section-card .section-title {
   font-family: "Whyte";
