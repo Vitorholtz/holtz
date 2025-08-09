@@ -4,7 +4,11 @@
     display: flex;
     background-color: $repo-accent-green;
     margin-bottom: 120px;
-    
+
+    @include md {
+        margin-bottom: 80px;
+    }
+
     &::after {
         content: '';
         position: absolute;
@@ -15,15 +19,15 @@
 
         @include xl {
             right: 64px;
-          }
+        }
 
         @include lg {
             right: 12px;
-          }
+        }
 
         @include sm {
             display: none;
-          }
+        }
     }
 
     &::before {
@@ -36,15 +40,15 @@
 
         @include xl {
             left: 64px;
-          }
+        }
 
         @include lg {
             left: 12px;
-          }
+        }
 
         @include sm {
             display: none;
-          }
+        }
     }
 
     .hero-content-container {
@@ -66,12 +70,12 @@
             max-width: 720px;
             gap: 80px;
             align-items: center
-          }
+        }
 
         @include sm {
             margin: 112px auto auto auto;
             padding: 0 24px;
-          }
+        }
 
         .title-and-index-container {
             display: flex;
@@ -97,7 +101,7 @@
                 }
             }
 
-            .project-index{
+            .project-index {
                 display: flex;
                 align-items: center;
                 gap: 6px;
@@ -105,10 +109,10 @@
                 .index-link {
                     @include body--small;
 
-                     &:first-child {
+                    &:first-child {
                         @include body--small-semibold;
                         color: $repo-green;
-                     }
+                    }
                 }
 
                 .index-arrow-icon {

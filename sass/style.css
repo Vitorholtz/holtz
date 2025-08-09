@@ -562,6 +562,7 @@ svg {
 @media (max-width: 780px) {
   .vh-title-container .vh-title--left {
     padding: 0 32px;
+    margin-top: 80px;
   }
 }
 @media (max-width: 480px) {
@@ -602,24 +603,28 @@ svg {
 }
 
 .text-block {
-  display: flex;
-  flex-direction: column;
-  gap: 48px;
-  margin: 0px 160px 0 160px;
+  max-width: 1080px;
+  margin: auto;
+}
+@media (max-width: 1520px) {
+  .text-block {
+    max-width: 100%;
+    margin: 0 160px 0 160px;
+  }
 }
 @media (max-width: 1380px) {
   .text-block {
-    margin: 0px 64px 0 64px;
+    margin: 0 64px 0 64px;
   }
 }
 @media (max-width: 1080px) {
   .text-block {
-    margin: 0px 12px 0 12px;
+    margin: 0 12px 0 12px;
   }
 }
 @media (max-width: 480px) {
   .text-block {
-    margin: 0px 0px 0 0px;
+    margin: 0;
   }
 }
 .text-block .text {
@@ -630,6 +635,9 @@ svg {
   font-weight: 300;
   font-size: 2rem;
   line-height: 1.4;
+}
+.text-block .text:not(:first-child) {
+  margin-top: 48px;
 }
 @media (max-width: 780px) {
   .text-block .text {
@@ -647,7 +655,14 @@ svg {
 }
 
 .text-list-container {
-  margin: 48px 160px 48px 160px;
+  margin: 48px auto;
+  max-width: 1080px;
+}
+@media (max-width: 1520px) {
+  .text-list-container {
+    max-width: 100%;
+    margin: 48px 160px 48px 160px;
+  }
 }
 @media (max-width: 1380px) {
   .text-list-container {
@@ -668,6 +683,7 @@ svg {
   max-width: 640px;
   margin: auto;
   list-style-type: disc;
+  padding-inline-start: 24px;
 }
 @media (max-width: 780px) {
   .text-list-container .list {
@@ -689,7 +705,19 @@ svg {
   font-size: 2rem;
   line-height: 1.4;
   color: #4A4F57;
-  margin-left: 24px;
+}
+@media (max-width: 780px) {
+  .text-list-container .list .list-item {
+    margin-left: 24px;
+  }
+}
+@media (max-width: 480px) {
+  .text-list-container .list .list-item {
+    font-family: "Whyte";
+    font-weight: 300;
+    font-size: 1.8rem;
+    line-height: 1.33;
+  }
 }
 .text-list-container .list .list-item:not(:first-child) {
   margin-top: 14px;
@@ -701,7 +729,33 @@ svg {
   max-width: 1080px;
   border-top: 1px #E0E0E3 solid;
   border-bottom: 1px #E0E0E3 solid;
-  margin-bottom: 200px;
+  margin-bottom: 80px;
+}
+@media (max-width: 1520px) {
+  .sections-cards-container {
+    max-width: 100%;
+    margin: 0 160px 80px 160px;
+  }
+}
+@media (max-width: 1200px) {
+  .sections-cards-container {
+    flex-direction: column;
+  }
+}
+@media (max-width: 1380px) {
+  .sections-cards-container {
+    margin: 0 64px 80px 64px;
+  }
+}
+@media (max-width: 1080px) {
+  .sections-cards-container {
+    margin: 0 12px 80px 12px;
+  }
+}
+@media (max-width: 480px) {
+  .sections-cards-container {
+    margin: 0 0 80px 0;
+  }
 }
 .sections-cards-container .section-card {
   display: flex;
@@ -713,9 +767,32 @@ svg {
   background-size: 244px;
   background-repeat: no-repeat;
 }
+@media (max-width: 1200px) {
+  .sections-cards-container .section-card {
+    width: 100%;
+    background-position: right -6% bottom 10%;
+  }
+}
+@media (max-width: 780px) {
+  .sections-cards-container .section-card {
+    padding: 32px;
+    background-position: right -10% bottom 10%;
+  }
+}
+@media (max-width: 480px) {
+  .sections-cards-container .section-card {
+    background-size: 0px;
+  }
+}
 .sections-cards-container .section-card:first-child {
   border-right: 1px #E0E0E3 solid;
   background-image: url("../assets/images/ux-skill.png");
+}
+@media (max-width: 1200px) {
+  .sections-cards-container .section-card:first-child {
+    border-right: 0;
+    border-bottom: 1px #E0E0E3 solid;
+  }
 }
 .sections-cards-container .section-card:last-child {
   background-image: url("../assets/images/ui-skill.png");
@@ -732,6 +809,9 @@ svg {
   font-weight: 300;
   font-size: 2rem;
   line-height: 1.4;
+}
+.sections-cards-container .section-card .primary-btn {
+  margin-top: auto;
 }
 
 .vh-header {
@@ -1771,6 +1851,11 @@ svg {
   display: flex;
   background-color: #126E64;
   margin-bottom: 120px;
+}
+@media (max-width: 780px) {
+  .project-intro-hero {
+    margin-bottom: 80px;
+  }
 }
 .project-intro-hero::after {
   content: "";

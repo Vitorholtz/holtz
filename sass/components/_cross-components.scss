@@ -173,7 +173,7 @@
     }
 }
 
-// Corte das bordas
+// Corte das bordas (Hero e footer)
 .border-details {
     display: flex;
     z-index: 2;
@@ -304,7 +304,7 @@
     align-items: center;
     max-width: 640px;
     margin: auto;
-    
+
     .vh-title {
         @include H2-bold;
         text-align: center;
@@ -316,6 +316,7 @@
 
             @include md {
                 padding: 0 32px;
+                margin-top: 80px;
             }
 
             @include sm {
@@ -350,21 +351,24 @@
 
 // Blocos de texto
 .text-block {
-    display: flex;
-    flex-direction: column;
-    gap: 48px;
-    margin: 0px 160px 0 160px;
+    max-width: 1080px;
+    margin: auto;
+
+    @include breakpoint(1520px) {
+        max-width: 100%;
+        margin: 0 160px 0 160px;
+    }
 
     @include xl {
-        margin: 0px 64px 0 64px;
+        margin: 0 64px 0 64px;
     }
 
     @include lg {
-        margin: 0px 12px 0 12px;
+        margin: 0 12px 0 12px;
     }
 
     @include sm {
-        margin: 0px 0px 0 0px;
+        margin: 0;
     }
 
     .text {
@@ -372,6 +376,10 @@
         max-width: 640px;
         margin: auto;
         @include body--large;
+
+        &:not(:first-child) {
+            margin-top: 48px;
+        }
 
         @include md {
             padding: 0 32px;
@@ -386,7 +394,13 @@
 
 // Lista
 .text-list-container {
-    margin: 48px 160px 48px 160px;
+    margin: 48px auto;
+    max-width: 1080px;
+
+    @include breakpoint(1520px) {
+        max-width: 100%;
+        margin: 48px 160px 48px 160px;
+    }
 
     @include xl {
         margin: 48px 64px 48px 64px;
@@ -404,6 +418,7 @@
         max-width: 640px;
         margin: auto;
         list-style-type: disc;
+        padding-inline-start: 24px;
 
         @include md {
             padding: 0 32px;
@@ -417,7 +432,14 @@
         .list-item {
             @include body--large;
             color: $h-gray ;
-            margin-left: 24px;
+
+            @include md {
+                margin-left: 24px;
+            }
+
+            @include sm {
+                @include body;
+            }
 
             &:not(:first-child) {
                 margin-top: 14px;
@@ -433,7 +455,28 @@
     max-width: 1080px;
     border-top: 1px $h-border solid;
     border-bottom: 1px $h-border solid;
-    margin-bottom: 200px;
+    margin-bottom: 80px;
+
+    @include breakpoint(1520px) {
+        max-width: 100%;
+        margin: 0 160px 80px 160px;
+    }
+
+    @include breakpoint(1200px) {
+        flex-direction: column;
+    }
+
+    @include xl {
+        margin: 0 64px 80px 64px;
+    }
+
+    @include lg {
+        margin: 0 12px 80px 12px;
+    }
+
+    @include sm {
+        margin: 0 0 80px 0;
+    }
 
     .section-card {
         display: flex;
@@ -445,9 +488,28 @@
         background-size: 244px;
         background-repeat: no-repeat;
 
+        @include breakpoint(1200px) {
+            width: 100%;
+            background-position: right -6% bottom 10%;
+        }
+
+        @include md {
+            padding: 32px;
+            background-position: right -10% bottom 10%;
+        }
+
+        @include sm {
+            background-size: 0px;
+        }
+
         &:first-child {
             border-right: 1px $h-border solid;
             background-image: url("../assets/images/ux-skill.png");
+
+            @include breakpoint(1200px) {
+                border-right: 0;
+                border-bottom: 1px $h-border solid;
+            }
         }
 
         &:last-child {
@@ -463,6 +525,10 @@
                 @include body--large;
 
             }
+        }
+
+        .primary-btn {
+            margin-top: auto;
         }
     }
 }
